@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<saves xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <saveslots>
+    <playerStats>
+      <name>Player1</name>
+      <money>2000</money>
+      <lvl>2</lvl>
+    </playerStats>
+    <playerStats>
+      <name>Player2</name>
+      <money>5</money>
+      <lvl>2</lvl>
+    </playerStats>
+    <playerStats>
+      <name>Player3</name>
+      <money>5</money>
+      <lvl>2</lvl>
+    </playerStats>
+  </saveslots>
+</saves>
