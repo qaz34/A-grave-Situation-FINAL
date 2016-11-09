@@ -7,7 +7,7 @@
 /[Ll]ibrary/
 sysinfo.txt
 *.stackdump
- 
+ProjectSettings/ProjectVersion.txt
 # ============================================= #
 # Visual Studio / MonoDevelop / Rider generated #
 # ============================================= #

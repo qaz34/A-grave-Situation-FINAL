@@ -16,8 +16,7 @@ public class fieldOfView : MonoBehaviour
     int walls;
     [Tooltip("How close to guard until he will find without fov")]
     public float awarenessDistance;
-    [Tooltip("Layer of grave hitboxes")]
-    int gravehit;
+
     [Tooltip("How far out he will see empty graves")]
     public float GraveRadius = 1;
     [Tooltip("How far out he will find markers")]
@@ -26,9 +25,9 @@ public class fieldOfView : MonoBehaviour
     void Start()
     {
         int tempLayer = ~(1 << LayerMask.NameToLayer("Walls"));
-        int othertemp = ~(1 << LayerMask.NameToLayer("graveHit"));
+
         walls = tempLayer;
-        gravehit = othertemp;
+
     }
     public void Find()
     {
