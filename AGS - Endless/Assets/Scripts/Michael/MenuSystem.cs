@@ -57,6 +57,8 @@ public class MenuSystem : MonoBehaviour
 
     [SerializeField]
     public bool testExperiment = false; //Will it save infomation during runtime?
+    public bool isMainMenu = false;
+    bool gamePause = true;
     public Scene scenes;
     public int Checktest = 3;
     int num_CurrentSlot = 0;
@@ -246,10 +248,16 @@ public class MenuSystem : MonoBehaviour
         {
             if (enter == false)
             { exit = true; command = ""; }
-            else if()
+            //else if (isMainMenu)
+            //{
+            //    SceneManager.LoadScene(levelCount);
+            //    Time.timeScale = 1;
+            //}
+            ///Make's no sense for the player to press escape and go stright into the game. More likely to quit are you sure?
+            else if (gamePause)
             {
-                SceneManager.LoadScene(levelCount);
                 Time.timeScale = 1;
+                gamePause = false;
             }
         }
 
