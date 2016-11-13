@@ -1,0 +1,197 @@
+fileFormatVersion: 2
+guid: fa9816b307e607d4d85662f3510bcba3
+timeCreated: 1479078804
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: ModelRig:ankle_L_JNT
+    100004: ModelRig:ankle_R_JNT
+    100006: ModelRig:arm1_L_JNT
+    100008: ModelRig:arm1_R_JNT
+    100010: ModelRig:arm2_L_JNT
+    100012: ModelRig:arm2_R_JNT
+    100014: ModelRig:arm3_L_JNT
+    100016: ModelRig:arm3_R_JNT
+    100018: ModelRig:ball_L_JNT
+    100020: ModelRig:ball_R_JNT
+    100022: ModelRig:characterRig_Global_CTRL
+    100024: ModelRig:chest_Fix_GRP
+    100026: ModelRig:Chest_JNT
+    100028: ModelRig:clav2_JNT
+    100030: ModelRig:clav2_JNT 1
+    100032: ModelRig:clav_END
+    100034: ModelRig:clav_END 1
+    100036: ModelRig:clav_LJNT
+    100038: ModelRig:clav_RJNT
+    100040: ModelRig:fingers1_L_JNT
+    100042: ModelRig:fingers1_R_JNT
+    100044: ModelRig:fingers2_L_JNT
+    100046: ModelRig:fingers2_R_JNT
+    100048: ModelRig:fingers3_L_END
+    100050: ModelRig:fingers3_R_END
+    100052: ModelRig:hand_L_JNT
+    100054: ModelRig:hand_R_JNT
+    100056: ModelRig:Head_END
+    100058: ModelRig:head_fix_GRP
+    100060: ModelRig:Head_JNT
+    100062: ModelRig:hip_Fix_GRP
+    100064: ModelRig:hip_GRP
+    100066: ModelRig:Hip_JNT
+    100068: ModelRig:knee_L_JNT
+    100070: ModelRig:knee_R_JNT
+    100072: ModelRig:Neck_Fix_GRP
+    100074: ModelRig:Neck_JNT
+    100076: ModelRig:root_fix_GRP
+    100078: ModelRig:Root_JNT
+    100080: ModelRig:thigh_L_JNT
+    100082: ModelRig:thigh_R_JNT
+    100084: ModelRig:thumb1_L_JNT
+    100086: ModelRig:thumb1_R_JNT
+    100088: ModelRig:thumb2_L_JNT
+    100090: ModelRig:thumb2_R_JNT
+    100092: ModelRig:thumb3_L_END
+    100094: ModelRig:thumb3_R_END
+    100096: ModelRig:tor_L_JNT
+    100098: ModelRig:tor_R_JNT
+    100100: ModelRig:wrist_L_END
+    100102: ModelRig:wrist_R_END
+    100104: PlayerMesh:MainCharacter_Body
+    100106: PlayerMesh:MainCharacter_Hair
+    100108: PlayerMesh:MainCharacter_Hat12
+    100110: PlayerMesh:MainCharacter_Head
+    100112: PlayerMesh:polySurface3
+    400000: //RootNode
+    400002: ModelRig:ankle_L_JNT
+    400004: ModelRig:ankle_R_JNT
+    400006: ModelRig:arm1_L_JNT
+    400008: ModelRig:arm1_R_JNT
+    400010: ModelRig:arm2_L_JNT
+    400012: ModelRig:arm2_R_JNT
+    400014: ModelRig:arm3_L_JNT
+    400016: ModelRig:arm3_R_JNT
+    400018: ModelRig:ball_L_JNT
+    400020: ModelRig:ball_R_JNT
+    400022: ModelRig:characterRig_Global_CTRL
+    400024: ModelRig:chest_Fix_GRP
+    400026: ModelRig:Chest_JNT
+    400028: ModelRig:clav2_JNT
+    400030: ModelRig:clav2_JNT 1
+    400032: ModelRig:clav_END
+    400034: ModelRig:clav_END 1
+    400036: ModelRig:clav_LJNT
+    400038: ModelRig:clav_RJNT
+    400040: ModelRig:fingers1_L_JNT
+    400042: ModelRig:fingers1_R_JNT
+    400044: ModelRig:fingers2_L_JNT
+    400046: ModelRig:fingers2_R_JNT
+    400048: ModelRig:fingers3_L_END
+    400050: ModelRig:fingers3_R_END
+    400052: ModelRig:hand_L_JNT
+    400054: ModelRig:hand_R_JNT
+    400056: ModelRig:Head_END
+    400058: ModelRig:head_fix_GRP
+    400060: ModelRig:Head_JNT
+    400062: ModelRig:hip_Fix_GRP
+    400064: ModelRig:hip_GRP
+    400066: ModelRig:Hip_JNT
+    400068: ModelRig:knee_L_JNT
+    400070: ModelRig:knee_R_JNT
+    400072: ModelRig:Neck_Fix_GRP
+    400074: ModelRig:Neck_JNT
+    400076: ModelRig:root_fix_GRP
+    400078: ModelRig:Root_JNT
+    400080: ModelRig:thigh_L_JNT
+    400082: ModelRig:thigh_R_JNT
+    400084: ModelRig:thumb1_L_JNT
+    400086: ModelRig:thumb1_R_JNT
+    400088: ModelRig:thumb2_L_JNT
+    400090: ModelRig:thumb2_R_JNT
+    400092: ModelRig:thumb3_L_END
+    400094: ModelRig:thumb3_R_END
+    400096: ModelRig:tor_L_JNT
+    400098: ModelRig:tor_R_JNT
+    400100: ModelRig:wrist_L_END
+    400102: ModelRig:wrist_R_END
+    400104: PlayerMesh:MainCharacter_Body
+    400106: PlayerMesh:MainCharacter_Hair
+    400108: PlayerMesh:MainCharacter_Hat12
+    400110: PlayerMesh:MainCharacter_Head
+    400112: PlayerMesh:polySurface3
+    4300000: PlayerMesh:MainCharacter_Hair
+    4300002: PlayerMesh:MainCharacter_Body
+    4300004: PlayerMesh:MainCharacter_Head
+    4300006: PlayerMesh:MainCharacter_Hat12
+    4300008: PlayerMesh:polySurface3
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: PlayerMesh:MainCharacter_Body
+    13700002: PlayerMesh:MainCharacter_Hair
+    13700004: PlayerMesh:MainCharacter_Hat12
+    13700006: PlayerMesh:MainCharacter_Head
+    13700008: PlayerMesh:polySurface3
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
