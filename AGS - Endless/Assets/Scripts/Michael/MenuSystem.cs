@@ -246,7 +246,7 @@ public class MenuSystem : MonoBehaviour
         {
             if (enter == false)
             { exit = true; command = ""; }
-            else
+            else if()
             {
                 SceneManager.LoadScene(levelCount);
                 Time.timeScale = 1;
