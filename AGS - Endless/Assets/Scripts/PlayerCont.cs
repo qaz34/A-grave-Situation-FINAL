@@ -17,15 +17,6 @@ public class PlayerCont : Seeable
     public int carryMoneh;
     float baseMoveSpeed;
 
-    [Header("Sounds")]
-    [Tooltip("sound played on step")]
-    public AudioClip moveSound;
-    [Tooltip("sound played on dig")]
-    public AudioClip digSound;
-    [Tooltip("sound played on dropping body")]
-    public AudioClip dropSound;
-
-
     [Header("Sprint settings")]
     [Tooltip("How fast the player will run")]
     public float sprintSpeed;
@@ -44,6 +35,7 @@ public class PlayerCont : Seeable
     [Tooltip("Speed after sprint without stamina")]
     public float noStaminaSpeed;
 
+    private Animator anim;
     ///// <Michael gameobject main menu linking>
     //public GameObject isMainMenuActive;
     ///// <Michael gameobject main menu linking>
@@ -79,6 +71,7 @@ public class PlayerCont : Seeable
     private float timeHeld;
     void Start()
     {
+        anim = GetComponent<Animator>();
         lineDraw = DrawLine();
         m_camera = GameObject.FindGameObjectWithTag("MainCamera").transform;
         body = GameObject.FindGameObjectWithTag("CarryBody");
@@ -108,11 +101,7 @@ public class PlayerCont : Seeable
         }
         else if (Input.GetButtonDown("Jump") && triggerObject.tag == "DropOff" && body.activeSelf == true)
         {
-            if (dropSound != null)
-            {
-                GetComponent<AudioSource>().clip = dropSound;
-                GetComponent<AudioSource>().Play();
-            }
+
             GameObject.FindGameObjectWithTag("Objective").SendMessage("Increment");
             moneh += carryMoneh;
             carryMoneh = 0;
@@ -235,10 +224,6 @@ public class PlayerCont : Seeable
                     timeDrained = Time.time;
                     drained = true;
                 }
-
-
-
-
             }
             else
             {
@@ -291,23 +276,18 @@ public class PlayerCont : Seeable
     }
     void FixedUpdate()
     {
+        Vector3 temp = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")).normalized * moveSpeed;
         if (moveDirection.magnitude > 0)
         {
             transform.rotation = Quaternion.Lerp(Quaternion.LookRotation(moveDirection), transform.rotation, turnSpeed);
 
-            if (moveSound != null && !GetComponent<AudioSource>().isPlaying)
-            {
-                GetComponent<AudioSource>().clip = moveSound;
-                GetComponent<AudioSource>().Play();
-            }
+            anim.SetFloat("Velocity", temp.magnitude);
+        }
+        else
+        {
+            anim.SetFloat("Velocity", temp.magnitude);
         }
         GetComponent<Rigidbody>().MovePosition(transform.position + movement * Time.deltaTime);
+
     }
-
-
-
-
-
-
-
 }
