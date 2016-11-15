@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 90c0f88afd4cd7e439db7eda85680aaf
-timeCreated: 1479167570
+guid: 45cbdd68c0c06e3418d6693fc05137cb
+timeCreated: 1479170151
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -124,7 +124,7 @@ ModelImporter:
     4300004: PlayerMesh:MainCharacter_Head
     4300006: PlayerMesh:MainCharacter_Hat12
     4300008: PlayerMesh:polySurface3
-    7400000: Carry
+    7400000: carryIdle
     9500000: //RootNode
     13700000: PlayerMesh:MainCharacter_Body
     13700002: PlayerMesh:MainCharacter_Hair
@@ -153,10 +153,10 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: Carry
+      name: carryIdle
       takeName: Take 001
       firstFrame: 1
-      lastFrame: 24
+      lastFrame: 36
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -175,23 +175,7 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events:
-      - time: 0.080671005
-        functionName: PlayWalk
-        data: 
-        objectReferenceParameter: {fileID: 1000011227833672, guid: 36de968cdd8f358438a358fe4b6a0025,
-          type: 2}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
-      - time: 0.58233213
-        functionName: PlayWalk
-        data: 
-        objectReferenceParameter: {fileID: 1000011227833672, guid: 36de968cdd8f358438a358fe4b6a0025,
-          type: 2}
-        floatParameter: 0
-        intParameter: 0
-        messageOptions: 0
+      events: []
       transformMask:
       - path: 
         weight: 1

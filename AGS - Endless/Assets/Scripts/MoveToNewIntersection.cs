@@ -165,6 +165,7 @@ public class MoveToNewIntersection : MonoBehaviour
     {
         m_fieldOfView.Find();
         currentPathing.followPath();
+        GetComponent<Animator>().SetFloat("Velocity", m_agent.velocity.magnitude);
     }
 }
 public class Pathing

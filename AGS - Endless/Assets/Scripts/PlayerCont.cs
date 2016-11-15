@@ -17,6 +17,11 @@ public class PlayerCont : Seeable
     public int carryMoneh;
     float baseMoveSpeed;
 
+    [Header("Sounds")]
+    [Tooltip("walk audio")]
+    public AudioClip walk;
+    private AudioSource audioSource;
+
     [Header("Sprint settings")]
     [Tooltip("How fast the player will run")]
     public float sprintSpeed;
@@ -72,6 +77,7 @@ public class PlayerCont : Seeable
     void Start()
     {
         anim = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
         lineDraw = DrawLine();
         m_camera = GameObject.FindGameObjectWithTag("MainCamera").transform;
         body = GameObject.FindGameObjectWithTag("CarryBody");
@@ -101,8 +107,8 @@ public class PlayerCont : Seeable
         }
         else if (Input.GetButtonDown("Jump") && triggerObject.tag == "DropOff" && body.activeSelf == true)
         {
-
             GameObject.FindGameObjectWithTag("Objective").SendMessage("Increment");
+            GameObject.FindGameObjectWithTag("CorpseSpawn").SendMessage("MakeBody");
             moneh += carryMoneh;
             carryMoneh = 0;
             moveSpeed = carrySpeed;
@@ -113,7 +119,7 @@ public class PlayerCont : Seeable
             StopCoroutine(routine);
             Camera.main.GetComponent<CameraFollow>().reset();
         }
-        
+
     }
     public void carry(int value)
     {
@@ -290,6 +296,15 @@ public class PlayerCont : Seeable
             anim.SetFloat("Velocity", temp.magnitude);
         }
         GetComponent<Rigidbody>().MovePosition(transform.position + movement * Time.deltaTime);
+
+    }
+    public void PlayWalk()
+    {
+        if (walk != null)
+        {
+            audioSource.clip = walk;
+            audioSource.Play();
+        }
 
     }
 }

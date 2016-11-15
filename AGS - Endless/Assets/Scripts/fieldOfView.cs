@@ -21,7 +21,8 @@ public class fieldOfView : MonoBehaviour
     public float GraveRadius = 1;
     [Tooltip("How far out he will find markers")]
     public float MarkerRadius = 10;
-
+    [Tooltip("The exclamation sprite renderer")]
+    public GameObject exclamation;
     void Start()
     {
         int tempLayer = ~(1 << LayerMask.NameToLayer("Walls"));
@@ -42,8 +43,11 @@ public class fieldOfView : MonoBehaviour
 
                 var guard = GetComponentInParent<MoveToNewIntersection>();
                 if (target.GetComponent<Seeable>() != null)
+                {
                     if (target.GetComponent<Seeable>().Seen("diggable") && guard.foundGrave == false)
                     {
+                        exclamation.SetActive(true);
+                        exclamation.transform.rotation = Quaternion.LookRotation(transform.position - Camera.main.transform.position);
                         var Targets1 = Physics.OverlapSphere(transform.position, GraveRadius, walls);
                         foreach (var target1 in Targets1)
                         {
@@ -56,20 +60,26 @@ public class fieldOfView : MonoBehaviour
                     }
                     else if (target.GetComponent<Seeable>().Seen("coin") && guard.currentPathing is follow)
                     {
+                        exclamation.SetActive(true);
+                        exclamation.transform.rotation = Quaternion.LookRotation(transform.position - Camera.main.transform.position);
                         target.GetComponent<Seeable>().alreadySeen = true;
                         guard.FoundCoin(target.transform);
                     }
                     else if (Physics.Linecast(transform.position, target.transform.position, out hit, ~(1 << LayerMask.NameToLayer("Walls") | 1 << LayerMask.NameToLayer("graveHit"))) && target.tag == "Player")
                     {
+
                         if (target.GetComponent<Seeable>().Seen(hit.transform.tag))
                         {
+                            exclamation.SetActive(true);
+                            exclamation.transform.rotation = Quaternion.LookRotation(transform.position - Camera.main.transform.position);
                             target.GetComponent<Seeable>().alreadySeen = true;
                             guard.FoundPlayer();
                         }
                     }
+                }
             }
         }
-    }   
+    }
     public Vector3 DirFromAngle(float angleInDegrees, bool angleIsGlobal)
     {
         if (!angleIsGlobal)
