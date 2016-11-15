@@ -119,7 +119,7 @@ public class PlayerCont : Seeable
             StopCoroutine(routine);
             Camera.main.GetComponent<CameraFollow>().reset();
         }
-        string thing = "thing" + "more thing" + baseMoveSpeed.ToString() + "asdf";
+
     }
     public void carry(int value)
     {
