@@ -113,6 +113,7 @@ public class PlayerCont : Seeable
             StopCoroutine(routine);
             Camera.main.GetComponent<CameraFollow>().reset();
         }
+        
     }
     public void carry(int value)
     {
@@ -266,6 +267,7 @@ public class PlayerCont : Seeable
             else
                 moveSpeed = carrySpeed;
         }
+        anim.SetBool("Carry", body.activeSelf);
     }
     public override bool Seen(string tag)
     {
