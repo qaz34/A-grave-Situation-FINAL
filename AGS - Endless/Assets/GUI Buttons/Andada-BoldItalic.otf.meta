@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 8dee50835aab1bd4a89a752351fa8abf
+timeCreated: 1479181152
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Andada
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 6a3782d493fb6074bbe07e8cd1faec77, type: 3}
+  - {fileID: 12800000, guid: 5eade368253de1c4497e7ac43c479690, type: 3}
+  - {fileID: 12800000, guid: 637f21b832835434ca268ef589d2cb44, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
