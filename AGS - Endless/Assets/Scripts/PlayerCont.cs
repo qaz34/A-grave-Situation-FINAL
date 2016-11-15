@@ -53,6 +53,9 @@ public class PlayerCont : Seeable
     [Header("Coin Throwing")]
     [Tooltip("Coin Prefab")]
     public GameObject coin;
+    [Tooltip("throwFrom empty")]
+    public GameObject throwFrom;
+
     [Tooltip("The max force to throw the coin")]
     public float maxThrowForce = 30;
     [Tooltip("How High the coin will be thrown (higher for less)")]
@@ -183,7 +186,7 @@ public class PlayerCont : Seeable
         {
             moneh--;
             droppedThisFrame = true;
-            GameObject go = Instantiate(coin, transform.position, Random.rotation) as GameObject;
+            GameObject go = Instantiate(coin, throwFrom.transform.position, Random.rotation) as GameObject;
             Physics.IgnoreCollision(go.GetComponent<Collider>(), GetComponent<Collider>(), true);
             Vector3 force = (transform.forward + (transform.up / arkAmount)).normalized;
             float throwAmount = Mathf.Clamp((Time.time - timeHeld) * throwSpeed, 0, maxThrowForce);
