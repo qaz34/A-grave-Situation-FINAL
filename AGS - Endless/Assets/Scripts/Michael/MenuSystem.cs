@@ -369,6 +369,7 @@ public class MenuSystem : MonoBehaviour
 
     public void options()
     {
+        Debug.Log("Options!");
         if (enter)
         {
             foreach (GameObject but in buttons_FirstSet)
