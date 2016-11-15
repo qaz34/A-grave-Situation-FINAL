@@ -59,7 +59,7 @@ public class MenuSystem : MonoBehaviour
     //public bool testExperiment = false; //Will it save infomation during runtime?
     public bool isMainMenu = false;
     public List<GameObject> main = new List<GameObject>();
-    int[] mainActive = {1,3,4,5,6,7,8};
+    int[] mainActive = {1,3,4,5,6,7,8,9};
     int[] pauseActive = {0,1,2,3,5,7};
 
 
@@ -129,14 +129,17 @@ public class MenuSystem : MonoBehaviour
         firstSet.Add("options"); //4
         firstSet.Add("leaderboard"); //5
         firstSet.Add("credits"); //6
-                                 //switch (GameType.SaveOrLoad_System)
-                                 //{  case }
-        foreach(GameObject buttons in buttons_FirstSet)
-        { buttons.SetActive(false); }
+        firstSet.Add("main0");
+        firstSet.Add("levelselect");
+        firstSet.Add("lodlevel");
+        //switch (GameType.SaveOrLoad_System)
+        //{  case }
+        foreach (GameObject buttons in buttons_FirstSet)
+        { if (buttons != null) { buttons.SetActive(false); } }
         if (isMainMenu)
         {
             foreach (int i in mainActive)
-            { buttons_FirstSet[i].SetActive(true); }
+            { if(buttons_FirstSet[i] != null) { buttons_FirstSet[i].SetActive(true); } }
         }
         else
         {
@@ -149,7 +152,7 @@ public class MenuSystem : MonoBehaviour
             //foreach(GameObject obj in children)
             //{ obj.SetActive(false); }
             foreach (GameObject obj in careersModeSwitch)
-            { obj.SetActive(false); Debug.Log("Test"); }
+            { obj.SetActive(false);  }
         }
     }
 
@@ -270,8 +273,7 @@ public class MenuSystem : MonoBehaviour
 
         if (username.text != "" && Input.GetKeyDown(KeyCode.Return)) //Cameron to upgrade for Control pad. Text field.
         {
-           // Debug.Log("Test and Check username access after enter!");
-            //stats.saveslots[slotSelect] = new playerStats(username.text);
+
             levelCount = 1;
             SceneManager.LoadScene(levelCount);
         }
@@ -279,22 +281,37 @@ public class MenuSystem : MonoBehaviour
         if (escapeOther && Input.GetKeyDown(KeyCode.Escape))
         {
 
-            // foreach(c)
-            //int i = 0;
-            //foreach (GameObject child in children)
-            //{
-            //    //Debug.Log(children[i]);
-            //    //if (child != buttons_SecondSet[0])
-            //    //{
-            //    //    child.SetActive(true);
-            //    //}
-            //    i++;
-            //}
             escapeOther = false;
             username.gameObject.SetActive(false);
         }
 
     }
+
+    public void levelSelection()
+    {/*Level selection screen, advanced click?*/
+        if (enter)
+        {
+            foreach (GameObject but in buttons_FirstSet)
+            { if (but != null) { but.SetActive(false); Debug.Log("Set button to false: " + but.name ); } }
+            buttons_SecondSet[4].gameObject.SetActive(true);
+            buttons_SecondSet[4].SetActive(true);
+            enter = false;
+        } //DEFAULT Load new buttons and unload old from first and second.
+
+        Debug.Log("Testing");
+    }
+
+    public void sceneLoader(int LevelToLoad)
+    {
+        Debug.LogError("Scene loading... Standby!");
+
+        if (LevelToLoad >= 0)
+        {
+            SceneManager.LoadScene(LevelToLoad);
+        }
+
+    }
+
     //////public void newGame() //load up the first level for training
     //////   {
     //////       stats.saveslots[num_CurrentSlot] = new playerStats(myName);
@@ -355,7 +372,7 @@ public class MenuSystem : MonoBehaviour
         if (enter)
         {
             foreach (GameObject but in buttons_FirstSet)
-            { but.SetActive(false); }
+            { if (but != null) { but.SetActive(false); } }
             buttons_SecondSet[2].gameObject.SetActive(true);
             buttons_SecondSet[2].SetActive(true);
             enter = false;
@@ -367,7 +384,7 @@ public class MenuSystem : MonoBehaviour
         if (enter)
         {
             foreach (GameObject but in buttons_FirstSet)
-            { but.SetActive(false); }
+            { if (but != null) { but.SetActive(false); } }
             buttons_SecondSet[3].gameObject.SetActive(true);
             buttons_SecondSet[3].SetActive(true);
             enter = false;
@@ -403,6 +420,8 @@ public class MenuSystem : MonoBehaviour
             {
                 if (name == function)
                 { command = function; }
+                else if (name.Contains("lodlevel"))
+                { command = name; }
 
                // i++;
             }
@@ -460,6 +479,7 @@ public class MenuSystem : MonoBehaviour
             { options(); }
             if (command.Contains(firstSet[6]))
             { credits(); }
+            if (command.Contains("levelselect")) { levelSelection(); }
             comGo = true;
         }
         else if (/*buttons_FirstSet[4].activeInHierarchy != true && */command == "")
@@ -468,7 +488,7 @@ public class MenuSystem : MonoBehaviour
             if (isMainMenu)
             {
                 foreach (int i in mainActive)
-                { buttons_FirstSet[i].SetActive(true); }
+                { if (buttons_FirstSet[i] != null) { buttons_FirstSet[i].SetActive(true); } }
             }
             else
             {
@@ -507,7 +527,8 @@ public class MenuSystem : MonoBehaviour
         //{
         //    if (check.GetComponent<Button>.)
         //        i++;
-        //}
+        //}        
+
 
         if (command.Contains("slots/"))
         {
@@ -525,7 +546,7 @@ public class MenuSystem : MonoBehaviour
                 careersMode();
             }
         }
-
+        
 
 
 
