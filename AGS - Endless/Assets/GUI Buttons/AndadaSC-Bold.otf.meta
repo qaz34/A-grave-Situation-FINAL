@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: a9b39d851c44643458eb0852ae4d455b
+timeCreated: 1479181152
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Andada SC
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 3754bd43af8457c47a6df5104d0f45a6, type: 3}
+  - {fileID: 12800000, guid: 15b4384935d925b429fdc831e98aa151, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
