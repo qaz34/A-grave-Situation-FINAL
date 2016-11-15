@@ -360,7 +360,7 @@ public class MenuSystem : MonoBehaviour
         if (enter)
         {
             foreach (GameObject but in buttons_FirstSet)
-            { but.SetActive(false); }
+            { if (but != null) { but.SetActive(false); } }
             buttons_SecondSet[1].gameObject.SetActive(true);
             buttons_SecondSet[1].SetActive(true);
             enter = false;
@@ -475,7 +475,7 @@ public class MenuSystem : MonoBehaviour
                 { command = "slots/load"; } //"slots/load
             }
             if (command.Contains(firstSet[5]))
-            { leaderboards(); }
+            { Debug.Log("Led board."); leaderboards(); }
             if (command.Contains(firstSet[4]))
             { options(); }
             if (command.Contains(firstSet[6]))
