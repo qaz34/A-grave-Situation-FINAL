@@ -6,7 +6,7 @@ using UnityEditor.SceneManagement;
 public class progressionScript : MonoBehaviour {
 
     public bool isCareerMode = false;
-    int currentLevel;
+    public int currentLevel;
     int score;
     public string name = "";
 
