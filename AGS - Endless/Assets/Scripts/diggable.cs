@@ -35,8 +35,6 @@ public class diggable : Seeable
     {
         while (true)
         {
-
-            Debug.Log(completion);
             if (collected == false && complete == true)
             {
                 collected = true;
@@ -46,7 +44,7 @@ public class diggable : Seeable
             {
                 complete = true;
                 Camera.main.GetComponent<CameraFollow>().reset();
-                Input.GetAxis("Axis breaker!");
+                break;
             }
             else
             {
@@ -54,7 +52,7 @@ public class diggable : Seeable
                 completion += digSpeed;
                 graveTop.position = new Vector3(graveTop.position.x, graveTop.position.y - digSpeed, graveTop.position.z);
                 percentComplete = Mathf.Floor(completion / dropDistance * 100);
-            }           
+            }
             yield return null;
         }
     }

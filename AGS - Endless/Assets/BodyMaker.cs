@@ -7,7 +7,7 @@ public class BodyMaker : MonoBehaviour
 
     public void MakeBody()
     {
-        GameObject go = Instantiate(BodyPrefab, transform.position, Random.rotation) as GameObject;
+        Instantiate(BodyPrefab, transform.position, Random.rotation);
     }
 
 }

@@ -16,7 +16,8 @@ public class PlayerCont : Seeable
     [Tooltip("Money being carried on body")]
     public int carryMoneh;
     float baseMoveSpeed;
-
+    public GameObject shovel;
+    public GameObject lantern;
     [Header("Sounds")]
     [Tooltip("walk audio")]
     public AudioClip walk;
@@ -39,13 +40,7 @@ public class PlayerCont : Seeable
     public float delay;
     [Tooltip("Speed after sprint without stamina")]
     public float noStaminaSpeed;
-
     private Animator anim;
-    ///// <Michael gameobject main menu linking>
-    //public GameObject isMainMenuActive;
-    ///// <Michael gameobject main menu linking>
-
-
     float maxStamina;
     bool drained = false;
     float timeDrained;
@@ -74,7 +69,7 @@ public class PlayerCont : Seeable
     private GameObject body;
     private IEnumerator lineDraw;
     Vector3 movement, moveDirection;
-
+    private bool digging;
     private bool droppedThisFrame = true;
     private float timeHeld;
     void Start()
@@ -105,6 +100,7 @@ public class PlayerCont : Seeable
     {
         if (Input.GetButtonDown("Jump") && triggerObject.tag == "diggable" && body.activeSelf == false)
         {
+            digging = true;
             routine = triggerObject.gameObject.GetComponent<diggable>().dig();
             StartCoroutine(routine);
         }
@@ -116,6 +112,10 @@ public class PlayerCont : Seeable
             carryMoneh = 0;
             moveSpeed = carrySpeed;
             body.SetActive(false);
+        }
+        else if (Input.GetButtonUp("Jump") || triggerObject.gameObject.GetComponent<diggable>().percentComplete >= 100)
+        {
+            digging = false;
         }
         if (Input.GetButtonUp("Jump") && routine != null)
         {
@@ -155,23 +155,6 @@ public class PlayerCont : Seeable
     // Update is called once per frame
     void Update()
     {
-        //if (isMainMenuActive != null) //Michael main menu activation code/pause
-        //{
-        //    if (Input.GetKeyDown(KeyCode.Escape) && !isMainMenuActive.activeSelf)
-        //    { Time.timeScale = 0; isMainMenuActive.SetActive(true); }
-        //    else if (Input.GetKeyDown(KeyCode.Escape))
-        //    {
-        //        Time.timeScale = 1;
-        //        isMainMenuActive.SetActive(false);
-        //        //SceneManager.LoadScene(0);
-        //    }
-        //}
-        //else if (Input.GetKeyDown(KeyCode.Escape))
-        //{
-        //    Time.timeScale = 0;
-        //    SceneManager.LoadScene(0);
-        //} //Michael main menu activation code/pause
-
         moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
         moveDirection = m_camera.TransformDirection(moveDirection);
         moveDirection.y *= 0;
@@ -276,7 +259,26 @@ public class PlayerCont : Seeable
             else
                 moveSpeed = carrySpeed;
         }
+        if (digging)
+        {
+            lantern.SetActive(false);
+            shovel.SetActive(true);
+            moveSpeed = 0;
+        }
+        else if(carrying)
+        {
+            lantern.SetActive(false);
+            shovel.SetActive(false);
+        }               
+        else
+        {
+            lantern.SetActive(true);
+            shovel.SetActive(false);
+        }
         anim.SetBool("Carry", body.activeSelf);
+        anim.SetBool("Digging", digging);
+        var thing = GetComponentsInChildren<Animator>(true);
+        thing[1].SetBool("Digging", digging);   
     }
     public override bool Seen(string tag)
     {
@@ -290,12 +292,16 @@ public class PlayerCont : Seeable
         Vector3 temp = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")).normalized * moveSpeed;
         if (moveDirection.magnitude > 0)
         {
-            transform.rotation = Quaternion.Lerp(Quaternion.LookRotation(moveDirection), transform.rotation, turnSpeed);
-
+            if (!digging)
+                transform.rotation = Quaternion.Lerp(Quaternion.LookRotation(moveDirection), transform.rotation, turnSpeed);
             anim.SetFloat("Velocity", temp.magnitude);
         }
         else
         {
+            if (digging)
+            {
+                transform.rotation = Quaternion.Lerp(Quaternion.LookRotation(triggerObject.transform.forward * -1), transform.rotation, turnSpeed);
+            }
             anim.SetFloat("Velocity", temp.magnitude);
         }
         GetComponent<Rigidbody>().MovePosition(transform.position + movement * Time.deltaTime);
@@ -308,6 +314,5 @@ public class PlayerCont : Seeable
             audioSource.clip = walk;
             audioSource.Play();
         }
-
     }
 }
