@@ -62,6 +62,7 @@ public class MenuSystem : MonoBehaviour
     int[] mainActive = {1,3,4,5,6,7,8,9};
     int[] pauseActive = {0,1,2,3,5,7};
 
+    public GameObject scoreCarrierCarrers;
 
     bool gamePause = true;
     public Scene scenes;
@@ -132,6 +133,8 @@ public class MenuSystem : MonoBehaviour
         firstSet.Add("main0");
         firstSet.Add("levelselect");
         firstSet.Add("lodlevel");
+        firstSet.Add("return");
+        firstSet.Add("career");
         //switch (GameType.SaveOrLoad_System)
         //{  case }
         foreach (GameObject buttons in buttons_FirstSet)
@@ -265,7 +268,7 @@ public class MenuSystem : MonoBehaviour
         {
             buttons_SecondSet[0].SetActive(true);
             foreach (GameObject but in buttons_FirstSet)
-            { but.SetActive(false); }
+            { if (but != null) { but.SetActive(false); } }
 
             username.gameObject.SetActive(true);
             enter = false;
@@ -273,7 +276,9 @@ public class MenuSystem : MonoBehaviour
 
         if (username.text != "" && Input.GetKeyDown(KeyCode.Return)) //Cameron to upgrade for Control pad. Text field.
         {
-
+            scoreCarrierCarrers.SetActive(true);
+            scoreCarrierCarrers.GetComponent<progressionScript>().name = username.text;
+            scoreCarrierCarrers.GetComponent<progressionScript>().currentLevel = 1;
             levelCount = 1;
             SceneManager.LoadScene(levelCount);
         }
@@ -428,6 +433,17 @@ public class MenuSystem : MonoBehaviour
             }
             comGo = false;
         }
+        if (command == "return")
+        {
+            if (enter == false)
+            { exit = true; command = ""; }
+            //else if (isMainMenu)
+            //{
+            //    SceneManager.LoadScene(levelCount);
+            //    Time.timeScale = 1;
+            //}
+            ///Make's no sense for the player to press escape and go stright into the game. More likely to quit are you sure?
+        }
         //buttons_FirstSet
         //buttons_SecondSet
 
@@ -481,6 +497,7 @@ public class MenuSystem : MonoBehaviour
             if (command.Contains(firstSet[6]))
             { credits(); }
             if (command.Contains("levelselect")) { levelSelection(); }
+
             comGo = true;
         }
         else if (/*buttons_FirstSet[4].activeInHierarchy != true && */command == "")
@@ -530,7 +547,8 @@ public class MenuSystem : MonoBehaviour
         //        i++;
         //}        
 
-
+            if (command == firstSet[11])
+            { careersMode(); }
         if (command.Contains("slots/"))
         {
             if (dropDown == GameType.SaveOrLoad_System)
@@ -539,15 +557,9 @@ public class MenuSystem : MonoBehaviour
                 { obj.SetActive(true); }
                 slots(0);
             }
-            if (dropDown == GameType.Career)
-            {
-                //foreach(GameObject obj in children)
-                //{ obj.SetActive(false); }
 
-                careersMode();
-            }
         }
-        
+
 
 
 
