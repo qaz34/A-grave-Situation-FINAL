@@ -162,8 +162,15 @@ public class MenuSystem : MonoBehaviour
 
 
     public void resume()
-    { SceneManager.LoadScene(levelCount); }
+    {
+        {
 
+
+            Time.timeScale = 1;
+            gamePause = false;
+
+        }
+    }
     public void slots(int slotSelect)
     {
         //Debug.Log("Slots active! ");
