@@ -60,7 +60,7 @@ public class MenuSystem : MonoBehaviour
     public bool isMainMenu = false;
     public List<GameObject> main = new List<GameObject>();
     int[] mainActive = {1,3,4,5,6,7,8,9};
-    int[] pauseActive = {0,1,2,3,5,7};
+    int[] pauseActive = {0,1,2,3,5,7,11};
 
     public GameObject scoreCarrierCarrers;
 
@@ -147,7 +147,7 @@ public class MenuSystem : MonoBehaviour
         else
         {
             foreach (int i in pauseActive)
-            { buttons_FirstSet[i].SetActive(true); }
+            { if (buttons_FirstSet[i] != null) buttons_FirstSet[i].SetActive(true); }
         }
 
         if (dropDown == GameType.Career)
@@ -157,6 +157,8 @@ public class MenuSystem : MonoBehaviour
             foreach (GameObject obj in careersModeSwitch)
             { obj.SetActive(false);  }
         }
+
+        if(scoreCarrierCarrers == null) { scoreCarrierCarrers = GameObject.Find("PROGRESS BROTHER"); }
     }
 
 
@@ -324,6 +326,13 @@ public class MenuSystem : MonoBehaviour
 
     }
 
+    public void restart()
+    {
+        command = "";
+        SceneManager.LoadScene(levelCount);
+
+    }
+
     //////public void newGame() //load up the first level for training
     //////   {
     //////       stats.saveslots[num_CurrentSlot] = new playerStats(myName);
@@ -403,6 +412,9 @@ public class MenuSystem : MonoBehaviour
             enter = false;
         } //DEFAULT Load new buttons and unload old from first and second.
     }
+
+    public void mainzero()
+    { SceneManager.LoadScene(0); command = ""; }
 
     public void quit()
     {
@@ -504,6 +516,9 @@ public class MenuSystem : MonoBehaviour
             if (command.Contains(firstSet[6]))
             { credits(); }
             if (command.Contains("levelselect")) { levelSelection(); }
+
+            if(command.Contains("main0")) { mainzero(); }
+            if(isMainMenu == false && command.Contains("new")) { if(scoreCarrierCarrers != null) { levelCount = scoreCarrierCarrers.GetComponent<progressionScript>().currentLevel; } restart(); }
 
             comGo = true;
         }
