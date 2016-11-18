@@ -29,7 +29,8 @@ public class MoveToNewIntersection : MonoBehaviour
     public float delaySpeed = 1;
     private NavMeshAgent m_agent;
     private List<Transform> m_markers;
-    private fieldOfView m_fieldOfView;
+    [HideInInspector]
+    public fieldOfView m_fieldOfView;
     private float normalMoveSpeed;
     private int currentPath;
     private List<Transform> m_searchMarkers = new List<Transform>();
@@ -107,8 +108,13 @@ public class MoveToNewIntersection : MonoBehaviour
     }
     IEnumerator StayAtCoin(float sec)
     {
-        yield return new WaitForSeconds(sec);
         coin current = currentPathing as coin;
+        while (m_agent.remainingDistance > 1)
+        {
+            m_agent.destination = current.m_coin.transform.position;
+            yield return new WaitForFixedUpdate();
+        }
+        yield return new WaitForSeconds(sec);
         Destroy(current.m_coin.gameObject);
         currentPathing = new follow(m_agent);
         currentPathing.followPath();
@@ -175,6 +181,7 @@ public class Pathing
     public Pathing(NavMeshAgent agent)
     {
         m_agent = agent;
+        m_agent.GetComponent<MoveToNewIntersection>().m_fieldOfView.exclamation.SetActive(false);
     }
     public virtual void followPath()
     {

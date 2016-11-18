@@ -113,9 +113,10 @@ public class PlayerCont : Seeable
             moveSpeed = carrySpeed;
             body.SetActive(false);
         }
-        else if (Input.GetButtonUp("Jump") || triggerObject.gameObject.GetComponent<diggable>().percentComplete >= 100)
+        else if (triggerObject.gameObject.GetComponent<diggable>() != null)
         {
-            digging = false;
+            if (Input.GetButtonUp("Jump") || triggerObject.gameObject.GetComponent<diggable>().percentComplete >= 100)
+                digging = false;
         }
         if (Input.GetButtonUp("Jump") && routine != null)
         {
@@ -265,11 +266,11 @@ public class PlayerCont : Seeable
             shovel.SetActive(true);
             moveSpeed = 0;
         }
-        else if(carrying)
+        else if (carrying)
         {
             lantern.SetActive(false);
             shovel.SetActive(false);
-        }               
+        }
         else
         {
             lantern.SetActive(true);
@@ -277,8 +278,8 @@ public class PlayerCont : Seeable
         }
         anim.SetBool("Carry", body.activeSelf);
         anim.SetBool("Digging", digging);
-        var thing = GetComponentsInChildren<Animator>(true);
-        thing[1].SetBool("Digging", digging);   
+        if (shovel.activeSelf == true)
+            shovel.GetComponent<Animator>().SetBool("Digging", digging);
     }
     public override bool Seen(string tag)
     {

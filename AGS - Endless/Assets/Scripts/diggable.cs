@@ -5,6 +5,8 @@ public class diggable : Seeable
 {
     [Tooltip("The object for the top of the grave")]
     public Transform graveTop;
+    [Tooltip("The object for the popup")]
+    public Transform Popup;
     [Tooltip("how fast this grave will be lowered")]
     public float digSpeed;
     [Tooltip("How far the grave needs to be dropped")]
@@ -31,6 +33,17 @@ public class diggable : Seeable
             value = Random.Range(Low, High);
 
     }
+
+    public void OnTriggerExit(Collider other)
+    {
+        Popup.gameObject.SetActive(false);
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        Popup.gameObject.SetActive(true);
+    }
+
     public IEnumerator dig()
     {
         while (true)
