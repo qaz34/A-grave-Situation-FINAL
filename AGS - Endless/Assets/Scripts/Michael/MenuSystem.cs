@@ -533,7 +533,7 @@ public class MenuSystem : MonoBehaviour
             else
             {
                 foreach(int i in pauseActive)
-                { buttons_FirstSet[i].SetActive(true); }
+                { if(buttons_FirstSet[i] != null){ buttons_FirstSet[i].SetActive(true); } }
             }
 
 
@@ -557,7 +557,7 @@ public class MenuSystem : MonoBehaviour
                 if (!isMainMenu)
                 {
                     foreach (GameObject o in main)
-                    { o.SetActive(false); }
+                    { if (o != null) { o.SetActive(false); } }
                 }
             }
         }
