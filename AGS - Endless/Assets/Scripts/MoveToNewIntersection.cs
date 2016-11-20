@@ -73,9 +73,11 @@ public class MoveToNewIntersection : MonoBehaviour
             searchPath++;
             if (searchPath >= m_searchMarkers.Count)
             {
+                m_fieldOfView.exclamation.SetActive(false);
                 m_searchMarkers = new List<Transform>();
                 m_agent.speed = normalMoveSpeed;
             }
+
         }
         else
         {
@@ -95,6 +97,7 @@ public class MoveToNewIntersection : MonoBehaviour
     {
         while (m_agent.remainingDistance > 1)
         {
+            m_fieldOfView.exclamation.transform.rotation = Quaternion.LookRotation(transform.position - Camera.main.transform.position);
             m_agent.destination = grave.transform.position;
             yield return new WaitForFixedUpdate();
         }
@@ -111,10 +114,12 @@ public class MoveToNewIntersection : MonoBehaviour
         coin current = currentPathing as coin;
         while (m_agent.remainingDistance > 1)
         {
+            m_fieldOfView.exclamation.transform.rotation = Quaternion.LookRotation(transform.position - Camera.main.transform.position);
             m_agent.destination = current.m_coin.transform.position;
             yield return new WaitForFixedUpdate();
         }
         yield return new WaitForSeconds(sec);
+        m_fieldOfView.exclamation.SetActive(false);
         Destroy(current.m_coin.gameObject);
         currentPathing = new follow(m_agent);
         currentPathing.followPath();
@@ -125,8 +130,7 @@ public class MoveToNewIntersection : MonoBehaviour
         {
             if (Time.timeScale >= FadeTick)
             {
-                Time.timeScale -= FadeTick;
-                Debug.Log(Time.timeScale);
+                Time.timeScale -= FadeTick;            
                 BlurOptimized main = Camera.main.GetComponent<BlurOptimized>();
                 main.blurSize += blurSpeed;
                 yield return new WaitForSeconds(.01f);
@@ -181,7 +185,7 @@ public class Pathing
     public Pathing(NavMeshAgent agent)
     {
         m_agent = agent;
-        m_agent.GetComponent<MoveToNewIntersection>().m_fieldOfView.exclamation.SetActive(false);
+        
     }
     public virtual void followPath()
     {

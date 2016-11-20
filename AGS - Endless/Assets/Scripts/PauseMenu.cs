@@ -1,41 +1,52 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using System.Collections.Generic;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 public class PauseMenu : MonoBehaviour
 {
-    public GameObject firstMenu;
-    // Use this for initialization
-    void Start()
-    {
-
-    }
+    int state;
+    public List<GameObject> menues;
+    public EventSystem eventSystem;
     public void Quit()
     {
         Application.Quit();
     }
-    // Update is called once per frame
+    public void loadScene(int scene)
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(scene);
+    }
+    public void Resume()
+    {
+        Time.timeScale = 1;
+        menues[0].SetActive(false);
+    }
+    public void Restart()
+    {
+        Resume();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    public void ShowMenu(int _menu)
+    {
+        foreach (GameObject __menu in menues)
+            __menu.SetActive(false);
+        menues[_menu].SetActive(true);
+        eventSystem.SetSelectedGameObject(menues[_menu].GetComponentInChildren<Button>().gameObject);
+    }
     void Update()
     {
-        if (firstMenu.GetComponent<MenuSystem>() != null && firstMenu.GetComponent<MenuSystem>().command == "")
+        if (Input.GetButtonDown("Pause") && Time.timeScale == 1)
         {
-//            Debug.Log("Cameron script: 1 and 0,");
-            if (Input.GetKeyDown(KeyCode.Escape) && Time.timeScale == 1)
-            {
-//                Debug.Log("Cameron: 1");
-                Time.timeScale = 0;
-                firstMenu.SetActive(true);
-            }
-            else if (Input.GetKeyDown(KeyCode.Escape) && Time.timeScale == 0)
-            {
-//                Debug.Log("Cameron: 0");
-                Time.timeScale = 1;
-                firstMenu.SetActive(false);
-            }
+            Time.timeScale = 0;
+            ShowMenu(0);
+        }
+        else if (Input.GetButtonDown("Pause") && Time.timeScale == 0)
+        {
+            ShowMenu(0);
+            Resume();
         }
     }
 }
 
-
-///Cameron's script, Michael altered to sync with original menu script due to been away when the script was needed. Altered to allow code to flow if menu is not on another layer beyond
-///the pause menu.
-///Michael added line 19.
