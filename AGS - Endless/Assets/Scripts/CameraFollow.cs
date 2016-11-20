@@ -24,6 +24,7 @@ public class CameraFollow : MonoBehaviour
         m_offset = transform.position - target.position;
         m_baseCamera = Camera.main.fieldOfView;
         StartCoroutine(zoomOut());
+        transform.LookAt(target.position);
     }
     public void zoom()
     {
@@ -64,12 +65,12 @@ public class CameraFollow : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (Input.GetAxis("bumpers") != 0 && cameraRotated == false)
+        if (Input.GetAxis("Camera") != 0 && cameraRotated == false)
         {
-            m_offset = Quaternion.AngleAxis(Input.GetAxis("bumpers") * 90, Vector3.up) * m_offset;
+            m_offset = Quaternion.AngleAxis(Input.GetAxis("Camera") * 90, Vector3.up) * m_offset;            
             cameraRotated = true;
         }
-        else if (Input.GetAxis("bumpers") == 0)
+        else if (Input.GetAxis("Camera") == 0)
         {
             cameraRotated = false;
         }
