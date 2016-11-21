@@ -21,10 +21,16 @@ public class PauseMenu : MonoBehaviour
     public void Resume()
     {
         Time.timeScale = 1;
+        //ShowMenu(0);
         menues[0].SetActive(false);
     }
-    public void Restart()
+    public void Restart(bool resetFromCap)
     {
+        if (resetFromCap && GameObject.FindGameObjectWithTag("GameManager") != null)
+        {        
+            GameManager gm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+            gm.Money--;
+        }
         Resume();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
