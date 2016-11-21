@@ -166,10 +166,11 @@
 //    public void resume()
 //    {
 //        {
-
+//            Debug.Log("Resuming!");
 
 //            Time.timeScale = 1;
 //            gamePause = false;
+            
 
 //        }
 //    }
@@ -487,106 +488,108 @@
 //                gamePause = false;
 //            }
 //        }
-
-//        if (command != "" && comGo != true)
-//        {
-//            Debug.Log("Check comGo!");
-//            int i = 0;
-//            foreach (string com in firstSet)
+//        if(gamePause)
+//        { 
+//            if (command != "" && comGo != true)
 //            {
-//                if (command == com)//Slots screen via (new/load/save)
-//                { Debug.Log("Check return; " + i); break; }
-//                i++;
-//            }
-//            Debug.Log("Do i get here? " + i);
-//            if (firstSet[i] == firstSet[1] || firstSet[i] == firstSet[2] || firstSet[i] == firstSet[3])
-//            { // (new/load/save)
-//                //if(firstSet is == firstSet[1])
-//                if (firstSet[i] == firstSet[1])
-//                { command = "slots/new"; }//"slots/new"
-//                if (firstSet[i] == firstSet[2])
-//                { command = "slots/save"; } //"slots/save"
-//                if (firstSet[i] == firstSet[3])
-//                { command = "slots/load"; } //"slots/load
-//            }
-//            if (command.Contains(firstSet[5]))
-//            { Debug.Log("Led board."); leaderboards(); }
-//            if (command.Contains(firstSet[4]))
-//            { options(); }
-//            if (command.Contains(firstSet[6]))
-//            { credits(); }
-//            if (command.Contains("levelselect")) { levelSelection(); }
-
-//            if(command.Contains("main0")) { mainzero(); }
-//            if(isMainMenu == false && command.Contains("new")) { if(scoreCarrierCarrers != null) { levelCount = scoreCarrierCarrers.GetComponent<progressionScript>().currentLevel; } restart(); }
-
-//            comGo = true;
-//        }
-//        else if (/*buttons_FirstSet[4].activeInHierarchy != true && */command == "")
-//        {
-
-//            if (isMainMenu)
-//            {
-//                foreach (int i in mainActive)
-//                { if (buttons_FirstSet[i] != null) { buttons_FirstSet[i].SetActive(true); } }
-//            }
-//            else
-//            {
-//                foreach(int i in pauseActive)
-//                { buttons_FirstSet[i].SetActive(true); }
-//            }
-
-
-
-//            //foreach (GameObject but in buttons_FirstSet)
-//            //{
-//            //    but.SetActive(true);
-//            //}
-//            foreach (GameObject but in buttons_SecondSet)
-//            { but.SetActive(false); }
-
-//            buttons_SecondSet[0].SetActive(false);
-//            username.gameObject.SetActive(false);
-
-//            enter = true;
-//            if (dropDown == GameType.Career)
-//            {
-
-//                foreach (GameObject obj in careersModeSwitch)
-//                { obj.SetActive(false); }
-//                if (!isMainMenu)
+//                Debug.Log("Check comGo!");
+//                int i = 0;
+//                foreach (string com in firstSet)
 //                {
-//                    foreach (GameObject o in main)
-//                    { o.SetActive(false); }
+//                    if (command == com)//Slots screen via (new/load/save)
+//                    { Debug.Log("Check return; " + i); break; }
+//                    i++;
+//                }
+//                Debug.Log("Do i get here? " + i);
+//                if (firstSet[i] == firstSet[1] || firstSet[i] == firstSet[2] || firstSet[i] == firstSet[3])
+//                { // (new/load/save)
+//                  //if(firstSet is == firstSet[1])
+//                    if (firstSet[i] == firstSet[1])
+//                    { command = "slots/new"; }//"slots/new"
+//                    if (firstSet[i] == firstSet[2])
+//                    { command = "slots/save"; } //"slots/save"
+//                    if (firstSet[i] == firstSet[3])
+//                    { command = "slots/load"; } //"slots/load
+//                }
+//                if (command.Contains(firstSet[5]))
+//                { Debug.Log("Led board."); leaderboards(); }
+//                if (command.Contains(firstSet[4]))
+//                { options(); }
+//                if (command.Contains(firstSet[6]))
+//                { credits(); }
+//                if (command.Contains("levelselect")) { levelSelection(); }
+//                if (command.Contains("resume")) { resume(); }
+
+//                if (command.Contains("main0")) { mainzero(); }
+//                if (isMainMenu == false && command.Contains("new")) { if (scoreCarrierCarrers != null) { levelCount = scoreCarrierCarrers.GetComponent<progressionScript>().currentLevel; } restart(); }
+
+//                comGo = true;
+//            }
+//            else if (/*buttons_FirstSet[4].activeInHierarchy != true && */command == "")
+//            {
+
+//                if (isMainMenu)
+//                {
+//                    foreach (int i in mainActive)
+//                    { if (buttons_FirstSet[i] != null) { buttons_FirstSet[i].SetActive(true); } }
+//                }
+//                else
+//                {
+//                    foreach (int i in pauseActive)
+//                    { if (buttons_FirstSet[i] != null) { buttons_FirstSet[i].SetActive(true); } }
+//                }
+
+
+
+//                //foreach (GameObject but in buttons_FirstSet)
+//                //{
+//                //    but.SetActive(true);
+//                //}
+//                foreach (GameObject but in buttons_SecondSet)
+//                { but.SetActive(false); }
+
+//                buttons_SecondSet[0].SetActive(false);
+//                username.gameObject.SetActive(false);
+
+//                enter = true;
+//                if (dropDown == GameType.Career)
+//                {
+
+//                    foreach (GameObject obj in careersModeSwitch)
+//                    { obj.SetActive(false); }
+//                    if (!isMainMenu)
+//                    {
+//                        foreach (GameObject o in main)
+//                        { if (o != null) { o.SetActive(false); } }
+//                    }
 //                }
 //            }
-//        }
 
-//        //int i = 0;
-//        //foreach (GameObject check in buttons_FirstSet)
-//        //{
-//        //    if (check.GetComponent<Button>.)
-//        //        i++;
-//        //}        
+//            //int i = 0;
+//            //foreach (GameObject check in buttons_FirstSet)
+//            //{
+//            //    if (check.GetComponent<Button>.)
+//            //        i++;
+//            //}        
 
 //            if (command == firstSet[11])
 //            { careersMode(); }
-//        if (command.Contains("slots/"))
-//        {
-//            if (dropDown == GameType.SaveOrLoad_System)
+//            if (command.Contains("slots/"))
 //            {
-//                foreach (GameObject obj in careersModeSwitch)
-//                { obj.SetActive(true); }
-//                slots(0);
+//                if (dropDown == GameType.SaveOrLoad_System)
+//                {
+//                    foreach (GameObject obj in careersModeSwitch)
+//                    { obj.SetActive(true); }
+//                    slots(0);
+//                }
+
 //            }
+
 
 //        }
 
-
-
-
-
 //    }
+
 //}
 
 
