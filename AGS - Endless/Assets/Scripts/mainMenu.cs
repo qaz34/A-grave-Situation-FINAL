@@ -13,6 +13,13 @@ public class mainMenu : MonoBehaviour
     {
         GM = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
     }
+    public void LeaderBoard()
+    {
+        if (SceneManager.GetActiveScene().name == "LeaderBoard")
+            SceneManager.LoadScene(0);
+        else
+            SceneManager.LoadScene("LeaderBoard");
+    }
     // Use this for initialization
     public void SoundChanged(float value)
     {
@@ -27,6 +34,14 @@ public class mainMenu : MonoBehaviour
         GM.career = true;
         GM.time = Time.time;
         SceneManager.LoadScene(1);
+    }
+    public void SetName(string _name)
+    {
+        if (_name != "")
+        {
+            GM.Name = _name;
+            Career();
+        }
     }
     public void LoadMenu(int menu)
     {

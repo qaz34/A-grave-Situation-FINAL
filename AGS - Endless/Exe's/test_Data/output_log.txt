@@ -2,33 +2,100 @@ Initialize engine version: 5.4.0f3 (a6d8d714de6f)
 GfxDevice: creating device client; threaded=1
 Direct3D:
     Version:  Direct3D 11.0 [level 11.0]
-    Renderer: NVIDIA GeForce GTX 970 (ID=0x13c2)
+    Renderer: NVIDIA GeForce GTX 960 (ID=0x1401)
     Vendor:   NVIDIA
     VRAM:     3072 MB
 Begin MonoManager ReloadAssembly
-Platform assembly: C:\Users\Cameron\Documents\A-grave-Situation-FINAL\AGS - Endless\Exe's\test_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading C:\Users\Cameron\Documents\A-grave-Situation-FINAL\AGS - Endless\Exe's\test_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: C:\Users\Cameron\Documents\A-grave-Situation-FINAL\AGS - Endless\Exe's\test_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
-Loading C:\Users\Cameron\Documents\A-grave-Situation-FINAL\AGS - Endless\Exe's\test_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
-Platform assembly: C:\Users\Cameron\Documents\A-grave-Situation-FINAL\AGS - Endless\Exe's\test_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading C:\Users\Cameron\Documents\A-grave-Situation-FINAL\AGS - Endless\Exe's\test_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: C:\Users\Cameron\Documents\A-grave-Situation-FINAL\AGS - Endless\Exe's\test_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading C:\Users\Cameron\Documents\A-grave-Situation-FINAL\AGS - Endless\Exe's\test_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: C:\Users\Cameron\Documents\A-grave-Situation-FINAL\AGS - Endless\Exe's\test_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
-Loading C:\Users\Cameron\Documents\A-grave-Situation-FINAL\AGS - Endless\Exe's\test_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.047 seconds
-Platform assembly: C:\Users\Cameron\Documents\A-grave-Situation-FINAL\AGS - Endless\Exe's\test_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: C:\Users\Cameron\Documents\A-grave-Situation-FINAL\AGS - Endless\Exe's\test_Data\Managed\System.dll (this message is harmless)
-desktop: 3840x2160 60Hz; virtual: 8640x2228 at 0,0
+Platform assembly: C:\Users\cameron.oborn\Documents\A-grave-Situation-FINAL\AGS - Endless\Exe's\test_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\cameron.oborn\Documents\A-grave-Situation-FINAL\AGS - Endless\Exe's\test_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\cameron.oborn\Documents\A-grave-Situation-FINAL\AGS - Endless\Exe's\test_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\cameron.oborn\Documents\A-grave-Situation-FINAL\AGS - Endless\Exe's\test_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\cameron.oborn\Documents\A-grave-Situation-FINAL\AGS - Endless\Exe's\test_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\cameron.oborn\Documents\A-grave-Situation-FINAL\AGS - Endless\Exe's\test_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\cameron.oborn\Documents\A-grave-Situation-FINAL\AGS - Endless\Exe's\test_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\cameron.oborn\Documents\A-grave-Situation-FINAL\AGS - Endless\Exe's\test_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\cameron.oborn\Documents\A-grave-Situation-FINAL\AGS - Endless\Exe's\test_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\cameron.oborn\Documents\A-grave-Situation-FINAL\AGS - Endless\Exe's\test_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+- Completed reload, in  0.180 seconds
+Platform assembly: C:\Users\cameron.oborn\Documents\A-grave-Situation-FINAL\AGS - Endless\Exe's\test_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\cameron.oborn\Documents\A-grave-Situation-FINAL\AGS - Endless\Exe's\test_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 3840x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 0.669513 ms
-Setting up 1 worker threads for Enlighten.
-  Thread -> id: 1abc -> priority: 1 
+UnloadTime: 0.584401 ms
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 2458 -> priority: 1 
+  Thread -> id: 1638 -> priority: 1 
 The referenced script on this Behaviour is missing!
  
 (Filename:  Line: 1510)
+
+The referenced script on this Behaviour (Game Object 'map') is missing!
+ 
+(Filename:  Line: 1656)
+
+A script behaviour (probably MapGenerator?) has a different serialization layout when loading. (Read 32 bytes but expected 44 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename:  Line: 1713)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 2.363745 ms
+Exception: Critical Error: "Hidden/BlitAdd" shader is missing. Make sure it is included in "Always Included Shaders" in ProjectSettings/Graphics.
+  at VolumetricLightRenderer.Awake () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: GetRef
+  at (wrapper managed-to-native) UnityEngine.Camera:RemoveCommandBuffer (UnityEngine.Rendering.CameraEvent,UnityEngine.Rendering.CommandBuffer)
+  at VolumetricLightRenderer.OnDisable () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+
+Unloading 28 unused Assets to reduce memory usage. Loaded Objects now: 7755.
+Total: 1.432308 ms (FindLiveObjects: 0.310078 ms CreateObjectMapping: 0.190794 ms MarkObjects: 0.740942 ms  DeleteObjects: 0.189592 ms)
+
+Exception: Critical Error: "Sandbox/VolumetricLight" shader is missing. Make sure it is included in "Always Included Shaders" in ProjectSettings/Graphics.
+  at VolumetricLight.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Exception: Critical Error: "Sandbox/VolumetricLight" shader is missing. Make sure it is included in "Always Included Shaders" in ProjectSettings/Graphics.
+  at VolumetricLight.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Exception: Critical Error: "Sandbox/VolumetricLight" shader is missing. Make sure it is included in "Always Included Shaders" in ProjectSettings/Graphics.
+  at VolumetricLight.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Exception: Critical Error: "Sandbox/VolumetricLight" shader is missing. Make sure it is included in "Always Included Shaders" in ProjectSettings/Graphics.
+  at VolumetricLight.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Exception: Critical Error: "Sandbox/VolumetricLight" shader is missing. Make sure it is included in "Always Included Shaders" in ProjectSettings/Graphics.
+  at VolumetricLight.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Exception: Critical Error: "Sandbox/VolumetricLight" shader is missing. Make sure it is included in "Always Included Shaders" in ProjectSettings/Graphics.
+  at VolumetricLight.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Exception: Critical Error: "Sandbox/VolumetricLight" shader is missing. Make sure it is included in "Always Included Shaders" in ProjectSettings/Graphics.
+  at VolumetricLight.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Exception: Critical Error: "Sandbox/VolumetricLight" shader is missing. Make sure it is included in "Always Included Shaders" in ProjectSettings/Graphics.
+  at VolumetricLight.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
 
 The referenced script on this Behaviour is missing!
  
@@ -43,12 +110,8 @@ Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of yo
  
 (Filename:  Line: 1713)
 
-The referenced script on this Behaviour (Game Object 'Canvas') is missing!
- 
-(Filename:  Line: 1656)
-
-Unloading 9 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 2.597038 ms
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 2.495348 ms
 Exception: Critical Error: "Hidden/BlitAdd" shader is missing. Make sure it is included in "Always Included Shaders" in ProjectSettings/Graphics.
   at VolumetricLightRenderer.Awake () [0x00000] in <filename unknown>:0 
  
@@ -61,8 +124,8 @@ NullReferenceException: GetRef
 (Filename:  Line: -1)
 
 
-Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 11178.
-Total: 2.143768 ms (FindLiveObjects: 0.439415 ms CreateObjectMapping: 0.214135 ms MarkObjects: 1.165248 ms  DeleteObjects: 0.324065 ms)
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 7757.
+Total: 0.874648 ms (FindLiveObjects: 0.177874 ms CreateObjectMapping: 0.106964 ms MarkObjects: 0.578692 ms  DeleteObjects: 0.011117 ms)
 
 Exception: Critical Error: "Sandbox/VolumetricLight" shader is missing. Make sure it is included in "Always Included Shaders" in ProjectSettings/Graphics.
   at VolumetricLight.Start () [0x00000] in <filename unknown>:0 
@@ -104,10 +167,35 @@ Exception: Critical Error: "Sandbox/VolumetricLight" shader is missing. Make sur
  
 (Filename:  Line: -1)
 
-Exception: Critical Error: "Sandbox/VolumetricLight" shader is missing. Make sure it is included in "Always Included Shaders" in ProjectSettings/Graphics.
-  at VolumetricLight.Start () [0x00000] in <filename unknown>:0 
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1510)
+
+The referenced script on this Behaviour (Game Object 'map') is missing!
+ 
+(Filename:  Line: 1656)
+
+A script behaviour (probably MapGenerator?) has a different serialization layout when loading. (Read 32 bytes but expected 44 bytes)
+Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
+ 
+(Filename:  Line: 1713)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 2.846589 ms
+Exception: Critical Error: "Hidden/BlitAdd" shader is missing. Make sure it is included in "Always Included Shaders" in ProjectSettings/Graphics.
+  at VolumetricLightRenderer.Awake () [0x00000] in <filename unknown>:0 
  
 (Filename:  Line: -1)
+
+NullReferenceException: GetRef
+  at (wrapper managed-to-native) UnityEngine.Camera:RemoveCommandBuffer (UnityEngine.Rendering.CameraEvent,UnityEngine.Rendering.CommandBuffer)
+  at VolumetricLightRenderer.OnDisable () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 7757.
+Total: 1.370713 ms (FindLiveObjects: 0.325702 ms CreateObjectMapping: 0.170062 ms MarkObjects: 0.855118 ms  DeleteObjects: 0.018628 ms)
 
 Exception: Critical Error: "Sandbox/VolumetricLight" shader is missing. Make sure it is included in "Always Included Shaders" in ProjectSettings/Graphics.
   at VolumetricLight.Start () [0x00000] in <filename unknown>:0 
@@ -129,10 +217,23 @@ Exception: Critical Error: "Sandbox/VolumetricLight" shader is missing. Make sur
  
 (Filename:  Line: -1)
 
-NullReferenceException: Object reference not set to an instance of an object
-  at MoveToNewIntersection.FoundPlayer () [0x00000] in <filename unknown>:0 
-  at fieldOfView.Find () [0x00000] in <filename unknown>:0 
-  at MoveToNewIntersection.Update () [0x00000] in <filename unknown>:0 
+Exception: Critical Error: "Sandbox/VolumetricLight" shader is missing. Make sure it is included in "Always Included Shaders" in ProjectSettings/Graphics.
+  at VolumetricLight.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Exception: Critical Error: "Sandbox/VolumetricLight" shader is missing. Make sure it is included in "Always Included Shaders" in ProjectSettings/Graphics.
+  at VolumetricLight.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Exception: Critical Error: "Sandbox/VolumetricLight" shader is missing. Make sure it is included in "Always Included Shaders" in ProjectSettings/Graphics.
+  at VolumetricLight.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Exception: Critical Error: "Sandbox/VolumetricLight" shader is missing. Make sure it is included in "Always Included Shaders" in ProjectSettings/Graphics.
+  at VolumetricLight.Start () [0x00000] in <filename unknown>:0 
  
 (Filename:  Line: -1)
 
