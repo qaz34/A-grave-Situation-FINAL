@@ -15,8 +15,6 @@ public class PlayerCont : Seeable
     public int moneh;
     [Tooltip("Money being carried on body")]
     public int carryMoneh;
-    [Tooltip("The next level this one will go to in career")]
-    public int nextLevel;
     float baseMoveSpeed;
     public GameObject shovel;
     public GameObject lantern;
@@ -121,7 +119,9 @@ public class PlayerCont : Seeable
                 if (gm.career)
                 {
                     gm.Money = moneh;
-                    gm.NextLvl(nextLevel);
+                    PauseMenu pm = GameObject.FindGameObjectWithTag("PauseMenu").GetComponent<PauseMenu>();
+                    Time.timeScale = 0;
+                    pm.ShowMenu(3);
                 }
             }
             else if (body.activeSelf)
@@ -340,5 +340,5 @@ public class PlayerCont : Seeable
             audioSource.Play();
         }
     }
- 
+
 }
