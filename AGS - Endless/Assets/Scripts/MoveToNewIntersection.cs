@@ -1,8 +1,17 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityStandardAssets.ImageEffects;
+[System.Serializable]
+public struct Sounds
+{
+    public AudioClip moveSound;
+    public AudioClip foundSound;
+    public List<AudioClip> foundPlayerSounds;
+    public List<AudioClip> alertSounds;
+}
 public class MoveToNewIntersection : MonoBehaviour
 {
     [Tooltip("Player in scene")]
@@ -21,10 +30,7 @@ public class MoveToNewIntersection : MonoBehaviour
     public float fadeSpeed = .01f;
     [Tooltip("How fast the blur increses")]
     public float blurSpeed = .01f;
-    [Tooltip("Walk sound")]
-    public AudioClip moveSound;
-    [Tooltip("Sound when alerted")]
-    public AudioClip alertSound;
+    public Sounds sounds;
     [Tooltip("Delay before he serches around for graves")]
     public float delaySpeed = 1;
     private NavMeshAgent m_agent;
@@ -87,7 +93,7 @@ public class MoveToNewIntersection : MonoBehaviour
     }
     public void FoundEmptyGrave(GameObject grave)
     {
-        GetComponent<AudioSource>().clip = alertSound;
+        GetComponent<AudioSource>().clip = sounds.alertSounds[Random.Range(0, sounds.alertSounds.Count)];
         GetComponent<AudioSource>().Play();
         foundGrave = true;
         currentPathing = new coin(m_agent, grave.transform);
@@ -124,13 +130,18 @@ public class MoveToNewIntersection : MonoBehaviour
         currentPathing = new follow(m_agent);
         currentPathing.followPath();
     }
+    void Captured()
+    {
+        PauseMenu pm = GameObject.FindGameObjectWithTag("PauseMenu").GetComponent<PauseMenu>();
+        pm.ShowMenu(2);
+    }
     IEnumerator playerFoundFade(float FadeTick)
     {
         for (;;)
         {
-            if (Time.timeScale >= FadeTick)
+            if (Time.timeScale >= .2 + FadeTick)
             {
-                Time.timeScale -= FadeTick;            
+                Time.timeScale -= FadeTick;
                 BlurOptimized main = Camera.main.GetComponent<BlurOptimized>();
                 main.blurSize += blurSpeed;
                 yield return new WaitForSeconds(.01f);
@@ -138,16 +149,16 @@ public class MoveToNewIntersection : MonoBehaviour
             else
             {
                 Time.timeScale = 0;
-                Debug.Log(Time.timeScale);
+                Captured();
                 break;
             }
         }
     }
     public void FoundPlayer()
     {
-        if (alertSound != null && Player.GetComponent<PlayerCont>().enabled)
+        if (sounds.foundPlayerSounds.Count > 0 && Player.GetComponent<PlayerCont>().enabled)
         {
-            GetComponent<AudioSource>().clip = alertSound;
+            GetComponent<AudioSource>().clip = sounds.foundPlayerSounds[Random.Range(0, sounds.alertSounds.Count)];
             GetComponent<AudioSource>().Play();
             Player.GetComponent<PlayerCont>().enabled = false;
             BlurOptimized blur = Camera.main.gameObject.GetComponent<BlurOptimized>();
@@ -163,7 +174,7 @@ public class MoveToNewIntersection : MonoBehaviour
     }
     public void FoundCoin(Transform coin)
     {
-        GetComponent<AudioSource>().clip = alertSound;
+        GetComponent<AudioSource>().clip = sounds.alertSounds[Random.Range(0, sounds.alertSounds.Count)];
         GetComponent<AudioSource>().Play();
         m_agent.destination = coin.position;
         coin.GetComponent<CoinGrab>().grabbed = true;
@@ -185,7 +196,7 @@ public class Pathing
     public Pathing(NavMeshAgent agent)
     {
         m_agent = agent;
-        
+
     }
     public virtual void followPath()
     {
