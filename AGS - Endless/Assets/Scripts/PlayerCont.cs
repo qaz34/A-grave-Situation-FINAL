@@ -15,6 +15,8 @@ public class PlayerCont : Seeable
     public int moneh;
     [Tooltip("Money being carried on body")]
     public int carryMoneh;
+    [Tooltip("The next level this one will go to in career")]
+    public int nextLevel;
     float baseMoveSpeed;
     public GameObject shovel;
     public GameObject lantern;
@@ -84,6 +86,11 @@ public class PlayerCont : Seeable
         body.SetActive(false);
         maxStamina = stamina;
         baseMoveSpeed = moveSpeed;
+        if (GameObject.FindGameObjectWithTag("GameManager") != null)
+        {
+            audioSource.volume *= GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().sounds;
+            moneh = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>().Money;
+        }
     }
     public void OnTriggerEnter(Collider other)
     {
@@ -98,27 +105,42 @@ public class PlayerCont : Seeable
     }
     public void TriggerHandle()
     {
-        if (Input.GetButtonDown("Jump") && triggerObject.tag == "diggable" && body.activeSelf == false)
+        if (Input.GetButtonDown("Use") && triggerObject.tag == "diggable" && body.activeSelf == false)
         {
             digging = true;
             routine = triggerObject.gameObject.GetComponent<diggable>().dig();
             StartCoroutine(routine);
         }
-        else if (Input.GetButtonDown("Jump") && triggerObject.tag == "DropOff" && body.activeSelf == true)
+        else if (Input.GetButtonDown("Use") && triggerObject.tag == "DropOff")
         {
-            GameObject.FindGameObjectWithTag("Objective").SendMessage("Increment");
-            GameObject.FindGameObjectWithTag("CorpseSpawn").SendMessage("MakeBody");
-            moneh += carryMoneh;
-            carryMoneh = 0;
-            moveSpeed = carrySpeed;
-            body.SetActive(false);
+            if (GameObject.FindGameObjectWithTag("Objective").GetComponent<objective>().Complete >= GameObject.FindGameObjectWithTag("Objective").GetComponent<objective>().ObjectiveNum && !body.activeSelf)
+            {
+                GameManager gm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+                if (gm.career)
+                {
+                    gm.Money = moneh;
+                    gm.NextLvl(nextLevel);
+                }
+            }
+            else if (body.activeSelf)
+            {
+                if (GameObject.FindGameObjectWithTag("Objective") != null)
+                    GameObject.FindGameObjectWithTag("Objective").SendMessage("Increment");
+                if (GameObject.FindGameObjectWithTag("CorpseSpawn") != null)
+                    GameObject.FindGameObjectWithTag("CorpseSpawn").SendMessage("MakeBody");
+
+                moneh += carryMoneh;
+                carryMoneh = 0;
+                moveSpeed = carrySpeed;
+                body.SetActive(false);
+            }
         }
         else if (triggerObject.gameObject.GetComponent<diggable>() != null)
         {
-            if (Input.GetButtonUp("Jump") || triggerObject.gameObject.GetComponent<diggable>().percentComplete >= 100)
+            if (Input.GetButtonUp("Use") || triggerObject.gameObject.GetComponent<diggable>().percentComplete >= 100)
                 digging = false;
         }
-        if (Input.GetButtonUp("Jump") && routine != null)
+        if (Input.GetButtonUp("Use") && routine != null)
         {
             StopCoroutine(routine);
             Camera.main.GetComponent<CameraFollow>().reset();
@@ -182,7 +204,7 @@ public class PlayerCont : Seeable
         }
         if (triggerObject != null)
             TriggerHandle();
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Use"))
         {
             var targets = Physics.OverlapSphere(transform.position, grabDistance);
             foreach (var target in targets)

@@ -4,7 +4,8 @@ using UnityEngine.UI;
 public class objective : MonoBehaviour {
     [Tooltip("how many graves you need to dig")]
     public int ObjectiveNum;
-    private int Complete;
+    [HideInInspector]
+    public int Complete;
 	// Use this for initialization
 	void Start () {
         GetComponent<Text>().text = Complete + "/" + ObjectiveNum;
