@@ -18,7 +18,7 @@ public class MapInspector : Editor
         Event e = Event.current;
         Ray ray = Camera.current.ScreenPointToRay(new Vector2(e.mousePosition.x, Camera.current.pixelHeight - e.mousePosition.y));
         RaycastHit hit;
-        if (Physics.Raycast(ray, out hit, Mathf.Infinity) && e.keyCode == KeyCode.LeftAlt && mapGen.creating == true)
+        if (Physics.Raycast(ray, out hit, Mathf.Infinity) && e.keyCode == KeyCode.L && mapGen.creating == true)
         {
             selection.Add(hit.transform.gameObject);
             Selection.objects = selection.ToArray();
