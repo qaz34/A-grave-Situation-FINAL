@@ -6,7 +6,7 @@ public class LightningOverviewScript : MonoBehaviour {
 	public AudioSource source;
 	public AudioClip thunder;
 
-	public GameObject lightningStrikeSource;
+	//public GameObject lightningStrikeSource;
 
 	public float countdown;
 	public float minDelay;
@@ -90,7 +90,7 @@ public class LightningOverviewScript : MonoBehaviour {
 		Debug.Log ("LIGHTING FLASH - Amount of Lightning strikes: " + strikeNumbers);
 
 		if (strikeNumbers == 1) {  //  if only 1 lightning strike is chosen then
-			lightningStrikeSource.GetComponent<ParticleSystem>().Play (true);  //call the lightning sprite (part of the particle system) as being true
+			//lightningStrikeSource.GetComponent<ParticleSystem>().Play (true);  //call the lightning sprite (part of the particle system) as being true
 			gameObject.GetComponent<Light> ().enabled = (true);  //activate the lightning light source
 			Debug.Log ("LIGHTING FLASH - Lightning has been activated");
 			Invoke ("LightningFlashCancel", minTime);  //invoke the cancel function for the lightning after the minimum time variable
@@ -100,7 +100,7 @@ public class LightningOverviewScript : MonoBehaviour {
 		{
 			if ((Time.time - lastTime) > minTime) {  //Else if time clock time-last time is greater than the min time variabole AND
 				if (Random.value > threshold) {  //if a random generated number is greater than the threshold var THEN
-					lightningStrikeSource.GetComponent<ParticleSystem>().Play (true); //activate the lighting sprite
+					//lightningStrikeSource.GetComponent<ParticleSystem>().Play (true); //activate the lighting sprite
 					gameObject.GetComponent<Light> ().enabled = (true); //activate the lightning light source
 					Debug.Log ("LIGHTING FLASH - Lightning has been activated");
 					lastTime = Time.time;  //set the variable last time to equal the current time
