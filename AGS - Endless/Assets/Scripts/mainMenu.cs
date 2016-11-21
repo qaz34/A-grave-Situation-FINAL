@@ -40,7 +40,13 @@ public class mainMenu : MonoBehaviour
         if (_name != "")
         {
             GM.Name = _name;
-            Career();
+
+            if (_name == "DRAKONSMIT")
+            { SceneManager.LoadScene(9); }
+            else
+            {
+                Career();
+            }
         }
     }
     public void LoadMenu(int menu)
