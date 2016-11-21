@@ -188,6 +188,18 @@ public class MoveToNewIntersection : MonoBehaviour
         currentPathing.followPath();
         GetComponent<Animator>().SetFloat("Velocity", m_agent.velocity.magnitude);
     }
+    public void PlayWalk()
+    {
+        if (GetComponent<AudioSource>().isPlaying && GetComponent<AudioSource>().clip != sounds.moveSound)
+        {
+
+        }
+        else
+        {
+            GetComponent<AudioSource>().clip = sounds.moveSound;
+            GetComponent<AudioSource>().Play();
+        }
+    }
 }
 public class Pathing
 {

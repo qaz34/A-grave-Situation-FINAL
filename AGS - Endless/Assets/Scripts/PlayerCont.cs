@@ -22,7 +22,9 @@ public class PlayerCont : Seeable
     public GameObject lantern;
     [Header("Sounds")]
     [Tooltip("walk audio")]
-    public AudioClip walk;    
+    public AudioClip walk;
+    [Tooltip("Dig audio")]
+    public AudioClip Dig;
     private AudioSource audioSource;
 
     [Header("Sprint settings")]
@@ -338,4 +340,5 @@ public class PlayerCont : Seeable
             audioSource.Play();
         }
     }
+ 
 }

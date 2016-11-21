@@ -56,7 +56,15 @@ ModelImporter:
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
-      events: []
+      events:
+      - time: 0.27051282
+        functionName: PlayDig
+        data: 
+        objectReferenceParameter: {fileID: 1000012727056614, guid: c3082cc8ff7fc164db01da3160833f12,
+          type: 2}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
       transformMask:
       - path: 
         weight: 1
