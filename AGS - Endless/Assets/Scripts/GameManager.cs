@@ -21,5 +21,12 @@ public class GameManager : MonoBehaviour
     {
         Name = name;
     }
+    void Update()
+    {
+        if(SceneManager.GetActiveScene().name == "menu")
+        {
+            Money = 3;
+        }
+    }
 
 }
