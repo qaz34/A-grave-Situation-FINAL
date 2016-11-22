@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
         if(SceneManager.GetActiveScene().name == "menu")
         {
             Money = 3;
+            time = 0;
         }
     }
 

@@ -28,7 +28,7 @@ public class ScoreBoard : MonoBehaviour
     void sortLeaderboard()
     {
         string[] linesFromfile = scoreboard.text.Split("\n"[0]);
-        StreamWriter writer = new StreamWriter("assets/Resources/HighScores.txt");
+        StreamWriter writer = new StreamWriter("HighScores", false);
         for (int i = 0; i < 15; i += 3)
         {
             scores.Add(new ScoreInfo(linesFromfile[i], Convert.ToInt32(linesFromfile[i + 1]), linesFromfile[i + 2]));

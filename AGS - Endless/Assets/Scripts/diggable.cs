@@ -71,7 +71,7 @@ public class diggable : Seeable
                 graveTop.position = new Vector3(graveTop.position.x, graveTop.position.y - digSpeed, graveTop.position.z);
                 percentComplete = Mathf.Floor(completion / dropDistance * 100);
             }
-            yield return null;
+            yield return new WaitForFixedUpdate();
         }
     }
     public override bool Seen(string tag)

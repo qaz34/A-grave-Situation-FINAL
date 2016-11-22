@@ -50,15 +50,15 @@ public class CameraFollow : MonoBehaviour
             if (Camera.main.fieldOfView < m_baseCamera && zooming == false)
             {
                 Camera.main.fieldOfView += zoomOutSpeed;
-                yield return null;
+                yield return new WaitForFixedUpdate();
             }
             else if(zooming == false)
             {
                 Camera.main.fieldOfView = m_baseCamera;
                 StopCoroutine(zoomOut());
-                yield return null;
+                yield return new WaitForFixedUpdate();
             }
-            yield return null;
+            yield return new WaitForFixedUpdate();
         }
     }
 

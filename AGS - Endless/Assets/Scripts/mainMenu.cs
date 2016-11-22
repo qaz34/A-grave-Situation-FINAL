@@ -16,7 +16,7 @@ public class mainMenu : MonoBehaviour
     public void LeaderBoard()
     {
         if (SceneManager.GetActiveScene().name == "LeaderBoard")
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(1);
         else
             SceneManager.LoadScene("LeaderBoard");
     }

@@ -27,7 +27,7 @@ public class PauseMenu : MonoBehaviour
     public void Restart(bool resetFromCap)
     {
         if (resetFromCap && GameObject.FindGameObjectWithTag("GameManager") != null)
-        {        
+        {
             GameManager gm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
             gm.Money--;
         }
@@ -50,8 +50,11 @@ public class PauseMenu : MonoBehaviour
         }
         else if (Input.GetButtonDown("Pause") && Time.timeScale == 0)
         {
-            ShowMenu(0);
-            Resume();
+            if (menues[2].activeSelf == false && menues[3].activeSelf == false)
+            {
+                ShowMenu(0);
+                Resume();
+            }
         }
     }
 }

@@ -219,6 +219,54 @@ public class PlayerCont : Seeable
                     }
 
         }
+       
+        if (digging)
+        {
+            lantern.SetActive(false);
+            shovel.SetActive(true);
+            moveSpeed = 0;
+        }
+        else if (body.activeSelf)
+        {
+            lantern.SetActive(false);
+            shovel.SetActive(false);
+        }
+        else
+        {
+            lantern.SetActive(true);
+            shovel.SetActive(false);
+        }
+        anim.SetBool("Carry", body.activeSelf);
+        anim.SetBool("Digging", digging);
+        if (shovel.activeSelf == true)
+            shovel.GetComponent<Animator>().SetBool("Digging", digging);
+    }
+    public override bool Seen(string tag)
+    {
+        if (tag == "Player")
+            return true;
+        else
+            return false;
+    }
+    void FixedUpdate()
+    {
+        Vector3 temp = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")).normalized * moveSpeed;
+        if (moveDirection.magnitude > 0)
+        {
+            if (!digging)
+                transform.rotation = Quaternion.Lerp(Quaternion.LookRotation(moveDirection), transform.rotation, turnSpeed);
+            anim.SetFloat("Velocity", temp.magnitude);
+        }
+        else
+        {
+            if (digging)
+            {
+                transform.rotation = Quaternion.Lerp(Quaternion.LookRotation(triggerObject.transform.forward * -1), transform.rotation, turnSpeed);
+            }
+            anim.SetFloat("Velocity", temp.magnitude);
+        }
+        GetComponent<Rigidbody>().MovePosition(transform.position + movement * Time.deltaTime);
+
         if (Input.GetAxis("Sprint") != 0 && !drained && movement.magnitude > 0)
         {
             if (stamina >= consumedSpeed)
@@ -284,53 +332,6 @@ public class PlayerCont : Seeable
             else
                 moveSpeed = carrySpeed;
         }
-        if (digging)
-        {
-            lantern.SetActive(false);
-            shovel.SetActive(true);
-            moveSpeed = 0;
-        }
-        else if (body.activeSelf)
-        {
-            lantern.SetActive(false);
-            shovel.SetActive(false);
-        }
-        else
-        {
-            lantern.SetActive(true);
-            shovel.SetActive(false);
-        }
-        anim.SetBool("Carry", body.activeSelf);
-        anim.SetBool("Digging", digging);
-        if (shovel.activeSelf == true)
-            shovel.GetComponent<Animator>().SetBool("Digging", digging);
-    }
-    public override bool Seen(string tag)
-    {
-        if (tag == "Player")
-            return true;
-        else
-            return false;
-    }
-    void FixedUpdate()
-    {
-        Vector3 temp = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")).normalized * moveSpeed;
-        if (moveDirection.magnitude > 0)
-        {
-            if (!digging)
-                transform.rotation = Quaternion.Lerp(Quaternion.LookRotation(moveDirection), transform.rotation, turnSpeed);
-            anim.SetFloat("Velocity", temp.magnitude);
-        }
-        else
-        {
-            if (digging)
-            {
-                transform.rotation = Quaternion.Lerp(Quaternion.LookRotation(triggerObject.transform.forward * -1), transform.rotation, turnSpeed);
-            }
-            anim.SetFloat("Velocity", temp.magnitude);
-        }
-        GetComponent<Rigidbody>().MovePosition(transform.position + movement * Time.deltaTime);
-
     }
     public void PlayWalk()
     {
