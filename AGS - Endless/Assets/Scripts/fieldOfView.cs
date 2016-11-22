@@ -60,10 +60,14 @@ public class fieldOfView : MonoBehaviour
                     }
                     else if (target.GetComponent<Seeable>().Seen("coin") && guard.currentPathing is follow)
                     {
-                        exclamation.SetActive(true);
-                        exclamation.transform.rotation = Quaternion.LookRotation(transform.position - Camera.main.transform.position);
-                        target.GetComponent<Seeable>().alreadySeen = true;
-                        guard.FoundCoin(target.transform);
+                        Physics.Linecast(transform.position, target.transform.position, out hit, ~(1 << LayerMask.NameToLayer("Walls") | 1 << LayerMask.NameToLayer("graveHit")));
+                        if (target.GetComponent<Seeable>().Seen(hit.transform.tag))
+                        {
+                            exclamation.SetActive(true);
+                            exclamation.transform.rotation = Quaternion.LookRotation(transform.position - Camera.main.transform.position);
+                            target.GetComponent<Seeable>().alreadySeen = true;
+                            guard.FoundCoin(target.transform);
+                        }
                     }
                     else if (Physics.Linecast(transform.position, target.transform.position, out hit, ~(1 << LayerMask.NameToLayer("Walls") | 1 << LayerMask.NameToLayer("graveHit"))) && target.tag == "Player")
                     {

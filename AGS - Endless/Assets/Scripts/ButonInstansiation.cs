@@ -10,12 +10,12 @@ public class ButonInstansiation : MonoBehaviour
     void Start()
     {
         int count = SceneManager.sceneCountInBuildSettings;
-        for (int i = 2; i < count - 1; i++)
+        for (int i = 3; i < count - 1; i++)
         {
             GameObject btn = Instantiate<GameObject>(button);
             btn.transform.SetParent(transform, false);
             Text txt = btn.GetComponentInChildren<Text>();
-            txt.text = "Level " + (i - 1).ToString();
+            txt.text = "Level " + (i - 2).ToString();
             Button _btn = btn.GetComponent<Button>();
             int n = i;
             _btn.onClick.AddListener(delegate { LoadScene(n); });
