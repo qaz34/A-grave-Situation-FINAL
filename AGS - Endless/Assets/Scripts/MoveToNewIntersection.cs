@@ -79,6 +79,7 @@ public class MoveToNewIntersection : MonoBehaviour
             searchPath++;
             if (searchPath >= m_searchMarkers.Count)
             {
+                foundGrave = false;
                 m_fieldOfView.exclamation.SetActive(false);
                 m_searchMarkers = new List<Transform>();
                 m_agent.speed = normalMoveSpeed;
