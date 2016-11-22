@@ -3,7 +3,7 @@ using System.Collections;
 
 public class LightningOverviewScript : MonoBehaviour {
 
-	public AudioSource source;
+	AudioSource source;
 	public AudioClip thunder;
 
 	//public GameObject lightningStrikeSource;
