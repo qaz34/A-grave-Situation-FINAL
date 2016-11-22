@@ -33,20 +33,14 @@ public class mainMenu : MonoBehaviour
     {
         GM.career = true;
         GM.time = Time.time;
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
     public void SetName(string _name)
     {
         if (_name != "")
         {
             GM.Name = _name;
-
-            if (_name == "DRAKONSMIT")
-            { SceneManager.LoadScene(9); }
-            else
-            {
-                Career();
-            }
+            Career();
         }
     }
     public void LoadMenu(int menu)

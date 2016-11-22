@@ -8,13 +8,14 @@ public class TutorialSlides : MonoBehaviour
     [Tooltip("Images in order")]
     public List<Sprite> ImageSlides;
     int slide;
+    public int nextScene;
     void Update()
     {
         if (Input.GetButtonDown("Use"))
         {
             if (slide >= ImageSlides.Count)
             {
-                SceneManager.LoadScene(2);
+                SceneManager.LoadScene(nextScene);
             }
             else
             {
