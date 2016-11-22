@@ -38,10 +38,15 @@ public class diggable : Seeable
     {
         Popup.gameObject.SetActive(false);
     }
-
+    public void OnTriggerStay(Collider other)
+    {
+        if (collected)
+            Popup.gameObject.SetActive(false);
+    }
     public void OnTriggerEnter(Collider other)
     {
-        Popup.gameObject.SetActive(true);
+        if (!collected)
+            Popup.gameObject.SetActive(true);
     }
 
     public IEnumerator dig()
