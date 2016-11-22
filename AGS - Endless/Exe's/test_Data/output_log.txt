@@ -6,96 +6,36 @@ Direct3D:
     Vendor:   NVIDIA
     VRAM:     3072 MB
 Begin MonoManager ReloadAssembly
-Platform assembly: C:\Users\cameron.oborn\Documents\A-grave-Situation-FINAL\AGS - Endless\Exe's\test_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading C:\Users\cameron.oborn\Documents\A-grave-Situation-FINAL\AGS - Endless\Exe's\test_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: C:\Users\cameron.oborn\Documents\A-grave-Situation-FINAL\AGS - Endless\Exe's\test_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
-Loading C:\Users\cameron.oborn\Documents\A-grave-Situation-FINAL\AGS - Endless\Exe's\test_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
-Platform assembly: C:\Users\cameron.oborn\Documents\A-grave-Situation-FINAL\AGS - Endless\Exe's\test_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading C:\Users\cameron.oborn\Documents\A-grave-Situation-FINAL\AGS - Endless\Exe's\test_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: C:\Users\cameron.oborn\Documents\A-grave-Situation-FINAL\AGS - Endless\Exe's\test_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading C:\Users\cameron.oborn\Documents\A-grave-Situation-FINAL\AGS - Endless\Exe's\test_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: C:\Users\cameron.oborn\Documents\A-grave-Situation-FINAL\AGS - Endless\Exe's\test_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
-Loading C:\Users\cameron.oborn\Documents\A-grave-Situation-FINAL\AGS - Endless\Exe's\test_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.180 seconds
-Platform assembly: C:\Users\cameron.oborn\Documents\A-grave-Situation-FINAL\AGS - Endless\Exe's\test_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: C:\Users\cameron.oborn\Documents\A-grave-Situation-FINAL\AGS - Endless\Exe's\test_Data\Managed\System.dll (this message is harmless)
-desktop: 1920x1080 60Hz; virtual: 3840x1080 at 0,0
+Platform assembly: C:\Users\lachlan.shearer\Documents\A-grave-Situation-FINAL\AGS - Endless\Exe's\test_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\lachlan.shearer\Documents\A-grave-Situation-FINAL\AGS - Endless\Exe's\test_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\lachlan.shearer\Documents\A-grave-Situation-FINAL\AGS - Endless\Exe's\test_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\lachlan.shearer\Documents\A-grave-Situation-FINAL\AGS - Endless\Exe's\test_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\lachlan.shearer\Documents\A-grave-Situation-FINAL\AGS - Endless\Exe's\test_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\lachlan.shearer\Documents\A-grave-Situation-FINAL\AGS - Endless\Exe's\test_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\lachlan.shearer\Documents\A-grave-Situation-FINAL\AGS - Endless\Exe's\test_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\lachlan.shearer\Documents\A-grave-Situation-FINAL\AGS - Endless\Exe's\test_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\lachlan.shearer\Documents\A-grave-Situation-FINAL\AGS - Endless\Exe's\test_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\lachlan.shearer\Documents\A-grave-Situation-FINAL\AGS - Endless\Exe's\test_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+- Completed reload, in  0.175 seconds
+Platform assembly: C:\Users\lachlan.shearer\Documents\A-grave-Situation-FINAL\AGS - Endless\Exe's\test_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\lachlan.shearer\Documents\A-grave-Situation-FINAL\AGS - Endless\Exe's\test_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 3840x1154 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 0.584401 ms
+UnloadTime: 0.531515 ms
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 2458 -> priority: 1 
-  Thread -> id: 1638 -> priority: 1 
-The referenced script on this Behaviour is missing!
- 
-(Filename:  Line: 1510)
-
-The referenced script on this Behaviour (Game Object 'map') is missing!
- 
-(Filename:  Line: 1656)
-
-A script behaviour (probably MapGenerator?) has a different serialization layout when loading. (Read 32 bytes but expected 44 bytes)
-Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of your scripts?
- 
-(Filename:  Line: 1713)
-
+  Thread -> id: ca4 -> priority: 1 
+  Thread -> id: 8c8 -> priority: 1 
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 2.363745 ms
-Exception: Critical Error: "Hidden/BlitAdd" shader is missing. Make sure it is included in "Always Included Shaders" in ProjectSettings/Graphics.
-  at VolumetricLightRenderer.Awake () [0x00000] in <filename unknown>:0 
+UnloadTime: 2.343593 ms
+
+Unloading 32 unused Assets to reduce memory usage. Loaded Objects now: 316.
+Total: 0.278827 ms (FindLiveObjects: 0.036355 ms CreateObjectMapping: 0.041764 ms MarkObjects: 0.166455 ms  DeleteObjects: 0.033651 ms)
+
+The referenced script on this Behaviour is missing!
  
-(Filename:  Line: -1)
-
-NullReferenceException: GetRef
-  at (wrapper managed-to-native) UnityEngine.Camera:RemoveCommandBuffer (UnityEngine.Rendering.CameraEvent,UnityEngine.Rendering.CommandBuffer)
-  at VolumetricLightRenderer.OnDisable () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-
-Unloading 28 unused Assets to reduce memory usage. Loaded Objects now: 7755.
-Total: 1.432308 ms (FindLiveObjects: 0.310078 ms CreateObjectMapping: 0.190794 ms MarkObjects: 0.740942 ms  DeleteObjects: 0.189592 ms)
-
-Exception: Critical Error: "Sandbox/VolumetricLight" shader is missing. Make sure it is included in "Always Included Shaders" in ProjectSettings/Graphics.
-  at VolumetricLight.Start () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-Exception: Critical Error: "Sandbox/VolumetricLight" shader is missing. Make sure it is included in "Always Included Shaders" in ProjectSettings/Graphics.
-  at VolumetricLight.Start () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-Exception: Critical Error: "Sandbox/VolumetricLight" shader is missing. Make sure it is included in "Always Included Shaders" in ProjectSettings/Graphics.
-  at VolumetricLight.Start () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-Exception: Critical Error: "Sandbox/VolumetricLight" shader is missing. Make sure it is included in "Always Included Shaders" in ProjectSettings/Graphics.
-  at VolumetricLight.Start () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-Exception: Critical Error: "Sandbox/VolumetricLight" shader is missing. Make sure it is included in "Always Included Shaders" in ProjectSettings/Graphics.
-  at VolumetricLight.Start () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-Exception: Critical Error: "Sandbox/VolumetricLight" shader is missing. Make sure it is included in "Always Included Shaders" in ProjectSettings/Graphics.
-  at VolumetricLight.Start () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-Exception: Critical Error: "Sandbox/VolumetricLight" shader is missing. Make sure it is included in "Always Included Shaders" in ProjectSettings/Graphics.
-  at VolumetricLight.Start () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-Exception: Critical Error: "Sandbox/VolumetricLight" shader is missing. Make sure it is included in "Always Included Shaders" in ProjectSettings/Graphics.
-  at VolumetricLight.Start () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
+(Filename:  Line: 1510)
 
 The referenced script on this Behaviour is missing!
  
@@ -110,8 +50,12 @@ Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of yo
  
 (Filename:  Line: 1713)
 
+The referenced script on this Behaviour (Game Object 'MainMenu') is missing!
+ 
+(Filename:  Line: 1656)
+
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 2.495348 ms
+UnloadTime: 0.342825 ms
 Exception: Critical Error: "Hidden/BlitAdd" shader is missing. Make sure it is included in "Always Included Shaders" in ProjectSettings/Graphics.
   at VolumetricLightRenderer.Awake () [0x00000] in <filename unknown>:0 
  
@@ -124,8 +68,8 @@ NullReferenceException: GetRef
 (Filename:  Line: -1)
 
 
-Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 7757.
-Total: 0.874648 ms (FindLiveObjects: 0.177874 ms CreateObjectMapping: 0.106964 ms MarkObjects: 0.578692 ms  DeleteObjects: 0.011117 ms)
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 8059.
+Total: 1.252320 ms (FindLiveObjects: 0.208820 ms CreateObjectMapping: 0.144521 ms MarkObjects: 0.756560 ms  DeleteObjects: 0.141517 ms)
 
 Exception: Critical Error: "Sandbox/VolumetricLight" shader is missing. Make sure it is included in "Always Included Shaders" in ProjectSettings/Graphics.
   at VolumetricLight.Start () [0x00000] in <filename unknown>:0 
@@ -166,10 +110,120 @@ Exception: Critical Error: "Sandbox/VolumetricLight" shader is missing. Make sur
   at VolumetricLight.Start () [0x00000] in <filename unknown>:0 
  
 (Filename:  Line: -1)
+
+Exception: Critical Error: "Sandbox/VolumetricLight" shader is missing. Make sure it is included in "Always Included Shaders" in ProjectSettings/Graphics.
+  at VolumetricLight.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Exception: Critical Error: "Sandbox/VolumetricLight" shader is missing. Make sure it is included in "Always Included Shaders" in ProjectSettings/Graphics.
+  at VolumetricLight.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+ArgumentOutOfRangeException: Argument is out of range.
+Parameter name: index
+  at System.Collections.Generic.List`1[UnityEngine.GameObject].get_Item (Int32 index) [0x00000] in <filename unknown>:0 
+  at PauseMenu.ShowMenu (Int32 _menu) [0x00000] in <filename unknown>:0 
+  at PauseMenu.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PauseMenu.ShowMenu (Int32 _menu) [0x00000] in <filename unknown>:0 
+  at PauseMenu.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+ArgumentOutOfRangeException: Argument is out of range.
+Parameter name: index
+  at System.Collections.Generic.List`1[UnityEngine.GameObject].get_Item (Int32 index) [0x00000] in <filename unknown>:0 
+  at PauseMenu.ShowMenu (Int32 _menu) [0x00000] in <filename unknown>:0 
+  at PauseMenu.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 5.309141 ms
+
+Unloading 1033 unused Assets to reduce memory usage. Loaded Objects now: 527.
+Total: 2.515156 ms (FindLiveObjects: 0.085030 ms CreateObjectMapping: 0.086833 ms MarkObjects: 0.427856 ms  DeleteObjects: 1.914836 ms)
 
 The referenced script on this Behaviour is missing!
  
 (Filename:  Line: 1510)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1510)
+
+The referenced script on this Behaviour is missing!
+ 
+(Filename:  Line: 1510)
+
+The referenced script on this Behaviour (Game Object 'Canvas') is missing!
+ 
+(Filename:  Line: 1656)
+
+The referenced script on this Behaviour (Game Object 'MainMenu') is missing!
+ 
+(Filename:  Line: 1656)
 
 The referenced script on this Behaviour (Game Object 'map') is missing!
  
@@ -180,22 +234,11 @@ Did you #ifdef UNITY_EDITOR a section of your serialized properties in any of yo
  
 (Filename:  Line: 1713)
 
-Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 2.846589 ms
-Exception: Critical Error: "Hidden/BlitAdd" shader is missing. Make sure it is included in "Always Included Shaders" in ProjectSettings/Graphics.
-  at VolumetricLightRenderer.Awake () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.521900 ms
 
-NullReferenceException: GetRef
-  at (wrapper managed-to-native) UnityEngine.Camera:RemoveCommandBuffer (UnityEngine.Rendering.CameraEvent,UnityEngine.Rendering.CommandBuffer)
-  at VolumetricLightRenderer.OnDisable () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-
-Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 7757.
-Total: 1.370713 ms (FindLiveObjects: 0.325702 ms CreateObjectMapping: 0.170062 ms MarkObjects: 0.855118 ms  DeleteObjects: 0.018628 ms)
+Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 62190.
+Total: 11.424117 ms (FindLiveObjects: 2.333077 ms CreateObjectMapping: 2.744708 ms MarkObjects: 4.887594 ms  DeleteObjects: 1.458436 ms)
 
 Exception: Critical Error: "Sandbox/VolumetricLight" shader is missing. Make sure it is included in "Always Included Shaders" in ProjectSettings/Graphics.
   at VolumetricLight.Start () [0x00000] in <filename unknown>:0 
@@ -217,8 +260,8 @@ Exception: Critical Error: "Sandbox/VolumetricLight" shader is missing. Make sur
  
 (Filename:  Line: -1)
 
-Exception: Critical Error: "Sandbox/VolumetricLight" shader is missing. Make sure it is included in "Always Included Shaders" in ProjectSettings/Graphics.
-  at VolumetricLight.Start () [0x00000] in <filename unknown>:0 
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayAudio.Start () [0x00000] in <filename unknown>:0 
  
 (Filename:  Line: -1)
 
@@ -236,4 +279,649 @@ Exception: Critical Error: "Sandbox/VolumetricLight" shader is missing. Make sur
   at VolumetricLight.Start () [0x00000] in <filename unknown>:0 
  
 (Filename:  Line: -1)
+
+Exception: Critical Error: "Sandbox/VolumetricLight" shader is missing. Make sure it is included in "Always Included Shaders" in ProjectSettings/Graphics.
+  at VolumetricLight.Start () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
+
+Audio source failed to initialize audio spatializer. An audio spatializer is specified in the audio project settings, but the associated plugin was not found or initialized properly. Please make sure that the selected spatializer is compatible with the target.
+ 
+(Filename:  Line: 345)
 
