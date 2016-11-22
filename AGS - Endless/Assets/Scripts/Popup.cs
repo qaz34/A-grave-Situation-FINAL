@@ -4,6 +4,7 @@ using System.Collections;
 public class Popup : MonoBehaviour
 {
     public GameObject popup;
+    bool activated = false;
     void Start()
     {
         popup.SetActive(false);
@@ -24,8 +25,8 @@ public class Popup : MonoBehaviour
                     popup.SetActive(false);
                 }
             }
-            else
-            {
+            else if(!activated)
+            {                
                 popup.transform.rotation = Quaternion.LookRotation(transform.position - Camera.main.transform.position);
                 popup.SetActive(true);
             }
@@ -43,7 +44,7 @@ public class Popup : MonoBehaviour
                     popup.transform.rotation = Quaternion.LookRotation(transform.position - Camera.main.transform.position);
                     popup.SetActive(true);
                 }
-                else
+                else if (!activated)
                 {
                     popup.SetActive(false);
                 }
@@ -52,6 +53,7 @@ public class Popup : MonoBehaviour
     }
     public void OnTriggerExit(Collider other)
     {
+        activated = true;
         popup.SetActive(false);
     }
 }
